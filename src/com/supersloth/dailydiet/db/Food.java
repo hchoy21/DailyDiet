@@ -8,25 +8,22 @@ package com.supersloth.dailydiet.db;
 
 public class Food {
 	
-	// private variables
 	String _name;
-	String _symptoms;
 	int _calories;
+	String _category;
 	
 	public Food(){
 		
 	}
 	
-	public Food(String name,int calories, String symptoms){
+	public Food(String name,int calories, String category){
 		this._name = name;
 		this._calories = calories;
-		this._symptoms = symptoms;
+		this._category = category;
 	}
 	
-	public Food(String name, int calories){
-        this._name = name;
-        this._calories = calories;
-    }
+	
+	// getter and setter methods
 	
 	public String getName(){
 		return this._name;
@@ -44,12 +41,12 @@ public class Food {
 		this._calories = calories;
 	}
 	
-	public String getSymptoms(){
-		return this._symptoms;
+	public String getCategory(){
+		return this._category;
 	}
 	
-	public void setSymptoms(String symptoms){
-		this._symptoms = symptoms;
+	public void setCategory(String category){
+		this._category = category;
 	}
 	
 	@Override
