@@ -16,7 +16,7 @@ public class Food {
 		
 	}
 	
-	public Food(String name,int calories, String category){
+	public Food(String name, int calories, String category){
 		this._name = name;
 		this._calories = calories;
 		this._category = category;

@@ -2,6 +2,10 @@
 <resources>
 
     <string name="app_name">DailyDiet</string>
-    <string name="title_item_detail">Item Detail</string>
-
+    <string name="title_item_detail">Item Detail</string> 
+    <string name="yourProfile">Your Profile</string>
+    <string name="favoriteDishes">Favorite Dishes</string>
+	<string name="imHungry">I\'m Hungry!</string>
+	<string name="groceryList">Grocery List</string>
+	
 </resources>

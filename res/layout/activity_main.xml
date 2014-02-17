@@ -5,7 +5,40 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/hungry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile"
+        android:layout_centerHorizontal="true"
+        android:text="@string/imHungry" />
+
+    <Button
+        android:id="@+id/favoriteDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hungry"
+        android:layout_centerHorizontal="true"
+        android:text="@string/favoriteDishes" />
+
+    <Button
+        android:id="@+id/groceryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favoriteDish"
+        android:layout_centerHorizontal="true"
+        android:text="@string/groceryList" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hungry"
+        android:layout_centerVertical="true"
+        android:text="@string/yourProfile" />
 
 </RelativeLayout>
