@@ -10,35 +10,39 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/hungry"
+        android:id="@+id/groceryList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profile"
-        android:layout_centerHorizontal="true"
-        android:text="@string/imHungry" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/groceryList" />
 
     <Button
         android:id="@+id/favoriteDish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hungry"
-        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/groceryList"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView1"
         android:text="@string/favoriteDishes" />
 
     <Button
-        android:id="@+id/groceryList"
+        android:id="@+id/hungry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/favoriteDish"
-        android:layout_centerHorizontal="true"
-        android:text="@string/groceryList" />
+        android:layout_above="@+id/favoriteDish"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/imHungry" />
 
     <Button
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/hungry"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/hungry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:text="@string/yourProfile" />
 
 </RelativeLayout>
