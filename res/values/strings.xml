@@ -7,5 +7,6 @@
     <string name="favoriteDishes">Favorite Dishes</string>
 	<string name="imHungry">I\'m Hungry!</string>
 	<string name="groceryList">Grocery List</string>
+	<string name="calendarDiet">Calendar Diet</string>
 	
 </resources>

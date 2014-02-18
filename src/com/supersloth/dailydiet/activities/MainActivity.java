@@ -21,7 +21,20 @@ public class MainActivity extends Activity{
 		return true;
 	}
 	
-	public void toEatButton(){
+	public void profileButton(){
+		
+	}
+	
+	public void hungryButton(){
+		
 	}
 
+	public void favoriteDishesButton(){
+		
+	}
+	
+	public void groceryListButton(){
+		
+	}
+	
 }
