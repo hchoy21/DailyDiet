@@ -9,5 +9,6 @@
 	<string name="imHungry">I\'m Hungry!</string>
 	<string name="groceryList">Grocery List</string>
 	<string name="calendarDiet">Calendar Diet</string>
+	<string name="tobuy">To Buy</string>
 	
 </resources>
