@@ -5,14 +5,14 @@ import android.os.Bundle;
 
 import com.supersloth.dailydiet.R;
 
-public class GroceryListActivity extends Activity{
+public class ProfileActivity extends Activity{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_grocerylist);
+		setContentView(R.layout.activity_profile);
 	}
 	
-
+	
 }

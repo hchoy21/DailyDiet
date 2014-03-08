@@ -18,6 +18,7 @@ public class MainActivity extends Activity{
 		setContentView(R.layout.activity_main);
 		
 		Button bGroceryList = (Button) findViewById(R.id.bGroceryList);
+		Button bProfile = (Button) findViewById(R.id.bProfile);
 		
 		
 		// go to grocery list activity
@@ -25,8 +26,16 @@ public class MainActivity extends Activity{
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				groceryListButton();
+			}
+		});
+		
+		// go to profile activity
+		bProfile.setOnClickListener(new OnClickListener(){
+			
+			@Override
+			public void onClick(View v) {
+				profileButton();
 			}
 		});
 	}
@@ -39,7 +48,8 @@ public class MainActivity extends Activity{
 	}
 	
 	public void profileButton(){
-		
+		Intent intent = new Intent(this, ProfileActivity.class);
+		startActivity(intent);
 	}
 	
 	public void hungryButton(){
