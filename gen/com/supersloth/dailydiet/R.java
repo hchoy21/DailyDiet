@@ -14,7 +14,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f07000a;
+        public static final int action_settings=0x7f07000b;
         public static final int bFavoriteDish=0x7f070006;
         public static final int bGroceryList=0x7f070005;
         public static final int bHungry=0x7f070007;
@@ -24,6 +24,7 @@ public final class R {
         public static final int tvCalendarDietGroceryList=0x7f070000;
         public static final int tvCalendarDietMain=0x7f070009;
         public static final int tvGroceryListTitle=0x7f070001;
+        public static final int tvProfileTitle=0x7f07000a;
         public static final int tvToBuyGroceryList=0x7f070002;
     }
     public static final class layout {

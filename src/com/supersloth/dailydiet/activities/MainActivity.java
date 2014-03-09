@@ -19,7 +19,7 @@ public class MainActivity extends Activity{
 		
 		Button bGroceryList = (Button) findViewById(R.id.bGroceryList);
 		Button bProfile = (Button) findViewById(R.id.bProfile);
-		
+		Button bFavoriteDish = (Button) findViewById(R.id.bFavoriteDish);
 		
 		// go to grocery list activity
 		bGroceryList.setOnClickListener(new OnClickListener() {
@@ -38,6 +38,16 @@ public class MainActivity extends Activity{
 				profileButton();
 			}
 		});
+		
+		// go to favorite dish activity
+		bFavoriteDish.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				favoriteDishesButton();
+			}
+		});
 	}
 
 	@Override
@@ -46,7 +56,10 @@ public class MainActivity extends Activity{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
 	
+	
+	// Button Methods
 	public void profileButton(){
 		Intent intent = new Intent(this, ProfileActivity.class);
 		startActivity(intent);
@@ -57,7 +70,8 @@ public class MainActivity extends Activity{
 	}
 
 	public void favoriteDishesButton(){
-		
+		Intent intent = new Intent(this, FavoriteDishActivity.class);
+		startActivity(intent);
 	}
 	
 	public void groceryListButton(){
