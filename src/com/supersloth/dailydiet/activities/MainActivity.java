@@ -66,7 +66,8 @@ public class MainActivity extends Activity{
 	}
 	
 	public void hungryButton(){
-		
+		Intent intent = new Intent(this, HungryActivity.class);
+		startActivity(intent);
 	}
 
 	public void favoriteDishesButton(){
