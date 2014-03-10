@@ -11,7 +11,8 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bbqchickenwings=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
         public static final int action_settings=0x7f07000b;
@@ -19,13 +20,13 @@ public final class R {
         public static final int bGroceryList=0x7f070005;
         public static final int bHungry=0x7f070007;
         public static final int bProfile=0x7f070008;
-        public static final int listView1=0x7f070003;
-        public static final int textView1=0x7f070004;
-        public static final int tvCalendarDietGroceryList=0x7f070000;
+        public static final int listView1=0x7f070004;
+        public static final int textView1=0x7f070000;
+        public static final int tvCalendarDietGroceryList=0x7f070001;
         public static final int tvCalendarDietMain=0x7f070009;
-        public static final int tvGroceryListTitle=0x7f070001;
+        public static final int tvGroceryListTitle=0x7f070002;
         public static final int tvProfileTitle=0x7f07000a;
-        public static final int tvToBuyGroceryList=0x7f070002;
+        public static final int tvToBuyGroceryList=0x7f070003;
     }
     public static final class layout {
         public static final int activity_favorite=0x7f030000;

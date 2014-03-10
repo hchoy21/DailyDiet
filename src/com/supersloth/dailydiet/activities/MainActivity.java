@@ -3,6 +3,7 @@ package com.supersloth.dailydiet.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,8 @@ import com.supersloth.dailydiet.R;
 
 public class MainActivity extends Activity{
 
+	private static final String TAG = "MainActivity";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -20,12 +23,14 @@ public class MainActivity extends Activity{
 		Button bGroceryList = (Button) findViewById(R.id.bGroceryList);
 		Button bProfile = (Button) findViewById(R.id.bProfile);
 		Button bFavoriteDish = (Button) findViewById(R.id.bFavoriteDish);
+		Button bHungry = (Button) findViewById(R.id.bHungry);
 		
 		// go to grocery list activity
 		bGroceryList.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				Log.d(TAG, "Grocery list button clicked");
 				groceryListButton();
 			}
 		});
@@ -35,6 +40,7 @@ public class MainActivity extends Activity{
 			
 			@Override
 			public void onClick(View v) {
+				Log.d(TAG, "Profile button clicked");
 				profileButton();
 			}
 		});
@@ -45,7 +51,19 @@ public class MainActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				Log.d(TAG, "Favorite dish button clicked");
 				favoriteDishesButton();
+			}
+		});
+		
+		// go to hungry activity
+		bHungry.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Log.d(TAG, "I'm Hungry button clicked");
+				hungryButton();
 			}
 		});
 	}

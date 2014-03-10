@@ -23,6 +23,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.supersloth.dailydiet.activities.FavoriteDishActivity"
+            android:label="@string/favoriteDishes"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.supersloth.dailydiet.activities.GroceryListActivity"
+            android:label="@string/groceryList"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.supersloth.dailydiet.activities.HungryActivity"
+            android:label="@string/imHungry"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name="com.supersloth.dailydiet.activities.ProfileActivity"
+            android:label="@string/yourProfile"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
