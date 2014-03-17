@@ -9,15 +9,19 @@ package com.supersloth.dailydiet.db;
 public class Meal {
 	
 	String _name;
-	String _category;
+	String _protein;
+	String _veg;
+	String _carbs;
 	
 	public Meal(){
 		
 	}
 	
-	public Meal(String name, String category){
+	public Meal(String name, String protein, String veg, String carbs){
 		this._name = name;
-		this._category = category;
+		this._protein = protein;
+		this._veg = veg;
+		this._carbs = carbs;
 	}
 	
 	
@@ -30,16 +34,31 @@ public class Meal {
 		this._name = name;
 	}
 	
-	public String getCategory(){
-		return this._category;
+	public String getProtein(){
+		return this._protein;
 	}
 	
-	public void setCategory(String category){
-		this._category = category;
+	public void setProtein(String protein){
+		this._protein = protein;
 	}
 	
-	@Override
-	public String toString() {
+	public String getVeg(){
+		return this._veg;
+	}
+	
+	public void setVeg(String veg){
+		this._veg = veg;
+	}
+	
+	public String getCarbs(){
+		return this._carbs;
+	}
+	
+	public void setCarbs(String carbs){
+		this._carbs = carbs;
+	}
+	
+	public String mealToString() {
 		return this._name;
 	}
 }

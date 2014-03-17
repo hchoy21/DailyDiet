@@ -4,11 +4,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
     <Button
         android:id="@+id/bGroceryList"
         android:layout_width="wrap_content"
@@ -23,8 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bGroceryList"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/textView1"
         android:text="@string/favoriteDishes" />
 
     <Button
@@ -53,5 +48,31 @@
         android:layout_centerHorizontal="true"
         android:text="@string/calendarDiet"
         android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/tvTodaysDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCalendarDietMain"
+        android:layout_centerHorizontal="true"
+        android:text="TextView" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bProfile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:src="@drawable/bbqchickenwings" />
+
+    <TextView
+        android:id="@+id/tvTodaysMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton1"
+        android:layout_centerHorizontal="true"
+        android:text="TODAY" />
+"
 
 </RelativeLayout>
