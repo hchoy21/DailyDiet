@@ -10,5 +10,6 @@
 	<string name="groceryList">Grocery List</string>
 	<string name="calendarDiet">Calendar Diet</string>
 	<string name="tobuy">To Buy</string>
+	<string name="progressPic">Progress Picture</string>
 	
 </resources>

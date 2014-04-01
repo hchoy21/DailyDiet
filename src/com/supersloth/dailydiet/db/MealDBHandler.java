@@ -1,6 +1,7 @@
 package com.supersloth.dailydiet.db;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -45,10 +46,32 @@ public class MealDBHandler extends SQLiteOpenHelper{
 	 *  CREATE, READ, UPDATE, DELETE
 	 ********************************************************/
 	
-	Meal getMeal(String name){
+	public Meal getMeal(String name){
+		SQLiteDatabase db = this.getReadableDatabase();
+		 
+        Cursor cursor = db.query(TABLE_MEALS,		// table name
+        		new String[] { KEY_NAME,			// columns
+                	KEY_PROTEIN, KEY_VEG, KEY_CARB }, 
+                KEY_NAME + "=?",					// selection
+                new String[] { name },				// selectionArgs
+                null, 
+                null, 
+                null, 
+                null);
+        if (cursor != null)
+            cursor.moveToFirst();
+ 
+        Meal meal = new Meal(cursor.getString(0),
+                cursor.getString(1), cursor.getString(2), cursor.getString(3));
+		return meal;
+	}
+	
+	public Meal getChickenMeals(){
+		SQLiteDatabase db = this.getReadableDatabase();
+
+		// select KEY_NAME from TABLE_MEALS where KEY_PROTEIN having chicken
 		
-		
-		Meal meal = null;
+		Meal meal = new Meal();
 		
 		return meal;
 	}

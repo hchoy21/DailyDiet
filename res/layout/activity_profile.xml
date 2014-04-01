@@ -30,8 +30,6 @@
         android:layout_below="@+id/tvProfInstructions"
         android:ems="10"
         android:hint="Username" >
-
-        <requestFocus />
     </EditText>
 
     <EditText
@@ -66,12 +64,21 @@
         android:hint="Country" />
 
     <Button
+        android:id="@+id/bProgressPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/progressPic" />
+
+    <Button
         android:id="@+id/bUpdateProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@+id/etCountry"
         android:text="Update" />
 
 </RelativeLayout>

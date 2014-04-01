@@ -57,7 +57,6 @@ public class MainActivity extends Activity{
 		bFavoriteDish.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Log.d(TAG, "Favorite dish button clicked");
 				favoriteDishesButton();}});
 		
@@ -65,7 +64,6 @@ public class MainActivity extends Activity{
 		bHungry.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Log.d(TAG, "I'm Hungry button clicked");
 				hungryButton();}});
 		
@@ -76,7 +74,6 @@ public class MainActivity extends Activity{
 //			
 //			@Override
 //			public void onClick(View v) {
-//				// TODO Auto-generated method stub
 //				testButton();
 //			}
 //		});
