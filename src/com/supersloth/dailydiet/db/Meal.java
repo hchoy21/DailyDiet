@@ -9,6 +9,7 @@ package com.supersloth.dailydiet.db;
 
 public class Meal {
 	
+	int _id;
 	String _name;
 	String _protein;
 	String _veg;
@@ -18,47 +19,63 @@ public class Meal {
 		
 	}
 	
-	public Meal(String name, String protein, String veg, String carbs){
-		this._name = name;
-		this._protein = protein;
-		this._veg = veg;
-		this._carbs = carbs;
+	public Meal(String _name, String _protein, String _veg,
+			String _carbs) {
+		this._name = _name;
+		this._protein = _protein;
+		this._veg = _veg;
+		this._carbs = _carbs;
 	}
-	
-	
-	// getter and setter methods
-	public String getName(){
-		return this._name;
+
+	public Meal(int _id, String _name, String _protein, String _veg,
+			String _carbs) {
+		this._id = _id;
+		this._name = _name;
+		this._protein = _protein;
+		this._veg = _veg;
+		this._carbs = _carbs;
 	}
-	
-	public void setName(String name){
-		this._name = name;
+
+	public int get_id() {
+		return _id;
 	}
-	
-	public String getProtein(){
-		return this._protein;
+
+	public void set_id(int _id) {
+		this._id = _id;
 	}
-	
-	public void setProtein(String protein){
-		this._protein = protein;
+
+	public String get_name() {
+		return _name;
 	}
-	
-	public String getVeg(){
-		return this._veg;
+
+	public void set_name(String _name) {
+		this._name = _name;
 	}
-	
-	public void setVeg(String veg){
-		this._veg = veg;
+
+	public String get_protein() {
+		return _protein;
 	}
-	
-	public String getCarbs(){
-		return this._carbs;
+
+	public void set_protein(String _protein) {
+		this._protein = _protein;
 	}
-	
-	public void setCarbs(String carbs){
-		this._carbs = carbs;
+
+	public String get_veg() {
+		return _veg;
 	}
-	
+
+	public void set_veg(String _veg) {
+		this._veg = _veg;
+	}
+
+	public String get_carbs() {
+		return _carbs;
+	}
+
+	public void set_carbs(String _carbs) {
+		this._carbs = _carbs;
+	}
+
 	public String mealToString() {
 		return this._name;
 	}

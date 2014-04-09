@@ -1,6 +1,7 @@
 package com.supersloth.dailydiet.activities;
 
 import java.util.Calendar;
+import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,11 +14,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.supersloth.dailydiet.R;
+import com.supersloth.dailydiet.db.Meal;
+import com.supersloth.dailydiet.db.MealDBHandler;
 import com.supersloth.dailydiet.test.TestActivity;
 
 public class MainActivity extends Activity{
 
 	private static final String TAG = "MainActivity";
+	public List<Meal> mealsList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -68,15 +72,23 @@ public class MainActivity extends Activity{
 				hungryButton();}});
 		
 		
-		// test button for navigation drawer
-//		Button bTest = (Button) findViewById(R.id.button1);
-//		bTest.setOnClickListener(new OnClickListener() {
-//			
-//			@Override
-//			public void onClick(View v) {
-//				testButton();
-//			}
-//		});
+		// create db
+		MealDBHandler db = new MealDBHandler(this);
+		
+		// insert meals
+		Log.d("Insert: ", "Inserting ..");
+		db.addMeal(new Meal(1, "Spaghetti and Meatballs", "beef", null, "pasta"));
+		db.addMeal(new Meal(2, "Chicken Fried Rice", "chicken", "carrot", "rice"));
+		db.addMeal(new Meal(3, "Black and White Sesame Chicken", "chicken", "tomato", null));
+		db.addMeal(new Meal(4, "Grilled Salmon", "fish", "lettuce", null));
+		mealsList = db.getAllMeals();
+		
+		for(Meal m : mealsList){
+			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
+					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
+					+ ", Carb: " + m.get_carbs();
+			Log.d("Name: ", log);
+		}
 	}
 
 	@Override
@@ -86,12 +98,6 @@ public class MainActivity extends Activity{
 		return true;
 	}
 
-//	public void testButton(){
-//		Intent intent = new Intent(this, TestActivity.class);
-//		startActivity(intent);
-//	}
-	
-	
 	// Button Methods
 	public void profileButton(){
 		Intent intent = new Intent(this, ProfileActivity.class);
@@ -110,6 +116,10 @@ public class MainActivity extends Activity{
 	
 	public void groceryListButton(){
 		Intent intent = new Intent(this, GroceryListActivity.class);
+		startActivity(intent);
+	}
+	public void dbButton(){
+		Intent intent = new Intent(this, InsertMealsActivity.class);
 		startActivity(intent);
 	}
 	
