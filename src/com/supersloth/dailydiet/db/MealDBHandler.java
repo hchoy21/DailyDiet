@@ -6,6 +6,7 @@ import java.util.List;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -98,6 +99,31 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		
 		
 		return mealList;
+	}
+	
+	public List<Meal> getChickenMeals(){
+		List<Meal> chickenMeals = new ArrayList<Meal>();
+		
+		// select query
+		String select = "SELECT * FROM " + TABLE_MEALS + " WHERE PROTEIN chicken";
+		SQLiteDatabase db = this.getWritableDatabase();
+		Cursor cursor = db.rawQuery(select, null);
+		
+		if(cursor.moveToFirst()){
+			do{
+				Meal meal = new Meal();
+				meal.set_id(Integer.parseInt(cursor.getString(0)));
+				meal.set_name(cursor.getString(1));
+				meal.set_protein(cursor.getString(2));
+				meal.set_veg(cursor.getString(3));
+				meal.set_carbs(cursor.getColumnName(4));
+				
+				chickenMeals.add(meal);
+			}while(cursor.moveToNext());
+		}
+		
+		
+		return chickenMeals;
 	}
 	
 	public void addMeal(Meal meal){

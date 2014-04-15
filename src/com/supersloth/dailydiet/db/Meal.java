@@ -18,14 +18,6 @@ public class Meal {
 	public Meal(){
 		
 	}
-	
-	public Meal(String _name, String _protein, String _veg,
-			String _carbs) {
-		this._name = _name;
-		this._protein = _protein;
-		this._veg = _veg;
-		this._carbs = _carbs;
-	}
 
 	public Meal(int _id, String _name, String _protein, String _veg,
 			String _carbs) {

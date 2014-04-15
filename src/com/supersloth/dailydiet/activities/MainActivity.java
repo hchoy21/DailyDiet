@@ -20,7 +20,7 @@ import com.supersloth.dailydiet.db.MealDBHandler;
 public class MainActivity extends Activity{
 
 	private static final String TAG = "MainActivity";
-	public List<Meal> mealsList;
+	public List<Meal> mealsList, chickenMeals;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -82,12 +82,25 @@ public class MainActivity extends Activity{
 		db.addMeal(new Meal(4, "Grilled Salmon", "fish", "lettuce", null));
 		mealsList = db.getAllMeals();
 		
+//		chickenMeals = db.getChickenMeals();
+		
 		for(Meal m : mealsList){
 			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
 					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
 					+ ", Carb: " + m.get_carbs();
 			Log.d("Name: ", log);
 		}
+//		
+//		for(Meal m : chickenMeals){
+//			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
+//					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
+//					+ ", Carb: " + m.get_carbs();
+//			Log.d("Name: ", log);
+//		}
+	
+		
+		
+
 	}
 
 	@Override
@@ -115,10 +128,6 @@ public class MainActivity extends Activity{
 	
 	public void groceryListButton(){
 		Intent intent = new Intent(this, GroceryListActivity.class);
-		startActivity(intent);
-	}
-	public void dbButton(){
-		Intent intent = new Intent(this, InsertMealsActivity.class);
 		startActivity(intent);
 	}
 	
