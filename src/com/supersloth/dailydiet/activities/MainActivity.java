@@ -80,23 +80,24 @@ public class MainActivity extends Activity{
 		db.addMeal(new Meal(2, "Chicken Fried Rice", "chicken", "carrot", "rice"));
 		db.addMeal(new Meal(3, "Black and White Sesame Chicken", "chicken", "tomato", null));
 		db.addMeal(new Meal(4, "Grilled Salmon", "fish", "lettuce", null));
+		db.addMeal(new Meal(5, "Chik Fil A Sandwich", "chicken", "pickle", "bread"));
 		mealsList = db.getAllMeals();
 		
-//		chickenMeals = db.getChickenMeals();
+		chickenMeals = db.getMealsProtein("chicken");
 		
-		for(Meal m : mealsList){
-			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
-					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
-					+ ", Carb: " + m.get_carbs();
-			Log.d("Name: ", log);
-		}
-//		
-//		for(Meal m : chickenMeals){
+//		for(Meal m : mealsList){
 //			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
 //					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
 //					+ ", Carb: " + m.get_carbs();
 //			Log.d("Name: ", log);
 //		}
+		
+		for(Meal m : chickenMeals){
+			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
+					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
+					+ ", Carb: " + m.get_carbs();
+			Log.d("Name: ", log);
+		}
 	
 		
 		

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+ 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tvProfile"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/etStartWeight"
+        android:layout_below="@+id/profileUserStart"
+        android:ems="10"
+        android:inputType="number" />
+ 
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/profileUserGoal"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="number" />
+ 
+    <TextView
+        android:id="@+id/profileUserStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etName"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@+id/profileUserStartWeight"
+        android:text="@string/sAge" />
+ 
+    <TextView
+        android:id="@+id/profileUserGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etAge"
+        android:layout_toRightOf="@+id/profileUserStartWeight"
+        android:text="@string/sHeight" />
+ 
+    <TextView
+        android:id="@+id/profileUserStartWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="@string/sName" />
+ 
+    <TextView
+        android:id="@+id/profileUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etAge"
+        android:layout_marginTop="57dp"
+        android:layout_toLeftOf="@+id/profileUserStartWeight"
+        android:text="@string/startWeight" />
+ 
+    <TextView
+        android:id="@+id/profileUserAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/profileUserName"
+        android:layout_alignBottom="@+id/profileUserName"
+        android:layout_alignLeft="@+id/profileUserGoal"
+        android:text="@string/goalWeight" />
+ 
+    <EditText
+        android:id="@+id/etStartWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/profileUserName"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+ 
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/profileUserStartWeight"
+        android:ems="10"
+        android:inputType="textPersonName" />
+ 
+    <Button
+        android:id="@+id/bUpdateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etStartWeight"
+        android:layout_marginTop="30dp"
+        android:text="@string/bUpdateProfile" />
+ 
+    <EditText
+        android:id="@+id/etGoalWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bUpdateProfile"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+ 
+        <requestFocus />
+    </EditText>
+ 
+</RelativeLayout>

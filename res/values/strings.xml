@@ -11,5 +11,29 @@
 	<string name="calendarDiet">Calendar Diet</string>
 	<string name="tobuy">To Buy</string>
 	<string name="progressPic">Progress Picture</string>
-	
+	<string name="bHungry">I\'m Hungry</string>
+    <string name="bProfile">Profile</string>
+    <string name="bGroceryList">Grocery List</string>
+    <string name="bFavoriteDishes">Eating Tips</string>
+    <string name="bUpdateWeight">Update Your Weight</string>
+    <string name="bUpdate">Update Profile</string>
+    <string name="tvWelcome">Welcome</string>
+    <string name="tvProfile">Edit Profile</string>
+    <string name="progress">Your Progress</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="startWeight">Starting Weight</string>
+    <string name="goalWeight">Goal Weight</string>
+     
+    <string name="startDate">Starting Date</string>
+    <string name="sName">First &amp; Last Name</string>
+    <string name="sAge">Age in Years</string>
+    <string name="sHeight">Height in Inches</string>
+     
+    <string name="tvProfileHeader">Profile</string>
+    <string name="tvProgress">Progress Tracker</string>
+    <string name="tvWeightAsk">Please Input Your Most Recent Weight:</string>
+    <string name="bEditProfile">Edit Profile</string>
+    <string name="bUpdateProfile">Update Profile</string>
+ 
 </resources>

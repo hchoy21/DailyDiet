@@ -73,6 +73,12 @@ public class MealDBHandler extends SQLiteOpenHelper{
 //		// select KEY_NAME from TABLE_MEALS where KEY_PROTEIN having chicken
 //	}
 	
+	
+	/**
+	 * queries the database and returns a list of all meals
+	 * 
+	 * @return List<Meal> all meals
+	 */
 	public List<Meal> getAllMeals(){
 		List<Meal> mealList = new ArrayList<Meal>();
 		
@@ -90,7 +96,7 @@ public class MealDBHandler extends SQLiteOpenHelper{
 				meal.set_name(cursor.getString(1));
 				meal.set_protein(cursor.getString(2));
 				meal.set_veg(cursor.getString(3));
-				meal.set_carbs(cursor.getColumnName(4));
+				meal.set_carbs(cursor.getString(4));
 				
 				mealList.add(meal);
 				
@@ -101,13 +107,60 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return mealList;
 	}
 	
-	public List<Meal> getChickenMeals(){
-		List<Meal> chickenMeals = new ArrayList<Meal>();
+	public List<Meal> getMealsProtein(String protein){
+		List<Meal> meals = new ArrayList<Meal>();
 		
-		// select query
-		String select = "SELECT * FROM " + TABLE_MEALS + " WHERE PROTEIN chicken";
 		SQLiteDatabase db = this.getWritableDatabase();
-		Cursor cursor = db.rawQuery(select, null);
+		
+		Cursor cursor = db.query(true, TABLE_MEALS, new String[] {
+						KEY_ID,
+						KEY_NAME,
+						KEY_PROTEIN, 
+						KEY_VEG,
+						KEY_CARB
+				}, 
+				KEY_PROTEIN + "=?",
+				new String[] {protein},
+				null, 
+				null, 
+				null, 
+				null);
+		
+		if(cursor.moveToFirst()){
+			do{
+				Meal meal = new Meal();
+				meal.set_id(Integer.parseInt(cursor.getString(0)));
+				meal.set_name(cursor.getString(1));
+				meal.set_protein(cursor.getString(2));
+				meal.set_veg(cursor.getString(3));
+				meal.set_carbs(cursor.getString(4));
+				
+				meals.add(meal);
+
+			}while(cursor.moveToNext());
+		}
+				
+		return meals;
+	}
+
+	public List<Meal> getMealsCarb(String carb){
+		List<Meal> meals = new ArrayList<Meal>();
+		
+		SQLiteDatabase db = this.getWritableDatabase();
+		
+		Cursor cursor = db.query(true, TABLE_MEALS, new String[] {
+						KEY_ID,
+						KEY_NAME,
+						KEY_PROTEIN, 
+						KEY_VEG,
+						KEY_CARB
+				}, 
+				KEY_CARB + "=" + carb, 
+				null,
+				null, 
+				null, 
+				null, 
+				null);
 		
 		if(cursor.moveToFirst()){
 			do{
@@ -118,12 +171,12 @@ public class MealDBHandler extends SQLiteOpenHelper{
 				meal.set_veg(cursor.getString(3));
 				meal.set_carbs(cursor.getColumnName(4));
 				
-				chickenMeals.add(meal);
+				meals.add(meal);
+
 			}while(cursor.moveToNext());
 		}
-		
-		
-		return chickenMeals;
+				
+		return meals;
 	}
 	
 	public void addMeal(Meal meal){

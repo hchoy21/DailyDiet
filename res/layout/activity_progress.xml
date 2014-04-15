@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent" >
  
     <TextView
@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/tvProfileHeader"
+        android:text="@string/tvProgress"
         android:textAppearance="?android:attr/textAppearanceLarge" />
  
     <Button
@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="32dp"
         android:text="@string/bUpdateWeight" />
  
     <TextView
@@ -25,16 +26,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="31dp"
-        android:layout_toLeftOf="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:text="@string/tvWeightAsk"
         android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+    <EditText
+        android:id="@+id/etProgressWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileUserName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
  
     <TextView
         android:id="@+id/profileUserAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profileUserName"
-        android:layout_toLeftOf="@+id/textView1"
+        android:layout_below="@+id/etProgressWeight"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/startWeight"
         android:textAppearance="?android:attr/textAppearanceMedium" />
  
     <TextView
@@ -42,15 +56,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profileUserAge"
-        android:layout_toLeftOf="@+id/textView1"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
  
     <TextView
         android:id="@+id/profileUserStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profileUserStartWeight"
-        android:layout_toLeftOf="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="@string/goalWeight"
         android:textAppearance="?android:attr/textAppearanceMedium" />
  
     <TextView
@@ -58,33 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profileUserStart"
-        android:layout_toLeftOf="@+id/textView1"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
- 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="51dp"
-        android:text="@string/progress" />
- 
-    <Button
-        android:id="@+id/bEditProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bUpdateWeight"
-        android:layout_centerHorizontal="true"
-        android:text="@string/bEditProfile" />
- 
-    <TextView
-        android:id="@+id/profileUserPrgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView7"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_marginTop="25dp"
+        android:layout_toRightOf="@+id/profileUserAge" />
  
 </RelativeLayout>

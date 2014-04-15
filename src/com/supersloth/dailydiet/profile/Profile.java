@@ -6,54 +6,86 @@ package com.supersloth.dailydiet.profile;
  * @author Hendrik Choy
  *
  */
-public class Profile {
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Profile implements Parcelable{
 	
-	int _id;
-	String _firstName;
-	String _lastName;
-	String _gender;
+	/*
+	this needs to be used for storing the user preferences and 
+	depending on which button was pressed, save or load the preferences 
+	into the right activity.
 	
-	public Profile(){
+	activities that will be affected:
+		main        - UserName        - load
+		progress    - UpdateWeight    - save
+				    - StartingWeight  - load
+				    - GoalWeight	  - load
+		Profile     - AllUserInfo	  - load
+		EditProfile - AllUserInfo	  - save
+	*/
+	String userName;
+	String weight;
+	int age;
+	int height;
+	double startingWeight;
+	double goalWeight;
+	
+	public Profile(Parcel source){
 		
 	}
 	
-	public Profile(int id, String first, 
-			String last, String gender){
-		_id = id;
-		_firstName = first;
-		_lastName = last;
-		_gender = gender;
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getWeight() {
+		return weight;
+	}
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getHeight() {
+		return height;
+	}
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	public double getStartingWeight() {
+		return startingWeight;
+	}
+	public void setStartingWeight(double startingWeight) {
+		this.startingWeight = startingWeight;
+	}
+	public double getGoalWeight() {
+		return goalWeight;
+	}
+	public void setGoalWeight(double goalWeight) {
+		this.goalWeight = goalWeight;
+	}
+
+	@Override
+	public int describeContents() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	public int getId(){
-		return _id;
-	}
-	
-	public void setId(int id){
-		_id = id;
-	}
-	
-	public String getFirstName(){
-		return _firstName;
-	}
-	
-	public void setFirstName(String first){
-		_firstName = first;
-	}
-	
-	public String getLastName(){
-		return _lastName;
-	}
-	
-	public void setLastName(String last){
-		_lastName = last;
-	}
-	
-	public String getGender(){
-		return _gender;
-	}
-	
-	public void setGender(String gender){
-		_gender = gender;
-	}
+	//public String getUserInfo(){
+		
+	//}
 }
