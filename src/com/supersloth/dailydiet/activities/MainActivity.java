@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.supersloth.dailydiet.R;
 import com.supersloth.dailydiet.db.Meal;
 import com.supersloth.dailydiet.db.MealDBHandler;
-import com.supersloth.dailydiet.test.TestActivity;
 
 public class MainActivity extends Activity{
 
