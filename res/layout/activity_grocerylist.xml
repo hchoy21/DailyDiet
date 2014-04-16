@@ -1,41 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout 
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
-    <TextView
-        android:id="@+id/tvCalendarDietGroceryList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/calendarDiet"
-        android:textSize="36sp"/>
 
     <TextView
         android:id="@+id/tvGroceryListTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvCalendarDietGroceryList"
         android:layout_centerHorizontal="true"
         android:text="@string/groceryList"
         android:textSize="28sp" />
 
-    <TextView
-        android:id="@+id/tvToBuyGroceryList"
+    <CheckBox
+        android:id="@+id/cbChicken"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvGroceryListTitle"
-        android:text="@string/tobuy"
-        android:textSize="18sp" />
+        android:text="@string/chicken" />
 
-    <ListView
-        android:id="@+id/listView1"
-        android:layout_width="match_parent"
+    <CheckBox
+        android:id="@+id/cbBeef"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvToBuyGroceryList" >
-    </ListView>
+        android:layout_below="@+id/cbChicken"
+        android:text="@string/beef" />
+
+    <CheckBox
+        android:id="@+id/cbPork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbBeef"
+        android:text="@string/pork" />
+
+    <CheckBox
+        android:id="@+id/cbFish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbPork"
+        android:text="@string/fish" />
+
+    <CheckBox
+        android:id="@+id/cbLamb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbFish"
+        android:text="@string/lamb" />
+    
+    <CheckBox
+        android:id="@+id/cbMushrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbLamb"
+        android:text="@string/mushroom" />    
+
+    <CheckBox
+        android:id="@+id/cbLettuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbMushrooms"
+        android:text="@string/lettuce" />
+    
+    <CheckBox
+        android:id="@+id/cbBroccoli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbLettuce"
+        android:text="@string/broccoli" />
+    
+    <CheckBox
+        android:id="@+id/cbTomato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbBroccoli"
+        android:text="@string/tomato" />
+    
+    <CheckBox
+        android:id="@+id/cbBeans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbTomato"
+        android:text="@string/greenBean" />
+        
+    <CheckBox
+        android:id="@+id/cbRice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbBeans"
+        android:text="@string/rice" />
+    
+    <CheckBox
+        android:id="@+id/cbPasta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbRice"
+        android:text="@string/rice" />
+    
+    <CheckBox
+        android:id="@+id/cbBread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbPasta"
+        android:text="@string/bread" />
+    
+    <CheckBox
+        android:id="@+id/cbTortilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbBread"
+        android:text="@string/tortilla" />
+    
+    <CheckBox
+        android:id="@+id/cbPotato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbTortilla"
+        android:text="@string/potato" /> 
+           
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbPotato"
+        android:text="test" /> 
+        
+    <CheckBox
+        android:id="@+id/cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cbPotato"
+        android:text="test" /> 
+
+    <CheckBox
+        android:id="@+id/cb2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cb1"
+        android:text="test" />
+
+    <CheckBox
+        android:id="@+id/cb3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cb2"
+        android:text="test" />
+
+    <CheckBox
+        android:id="@+id/cb4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cb3"
+        android:text="test" />
+    
+    <CheckBox
+        android:id="@+id/cb5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cb4"
+        android:text="test" />       
+        
+    <CheckBox
+        android:id="@+id/cb6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/cb5"
+        android:text="test" />
+    
+	<Button
+	    android:id="@+id/bUpdateGroceryList"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/cb6"
+	    android:text="Update Grocery List" />
 
 </RelativeLayout>
+
+</ScrollView>

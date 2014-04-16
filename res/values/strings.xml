@@ -35,5 +35,21 @@
     <string name="tvWeightAsk">Please Input Your Most Recent Weight:</string>
     <string name="bEditProfile">Edit Profile</string>
     <string name="bUpdateProfile">Update Profile</string>
- 
+    
+    <string name="chicken">Chicken</string>
+    <string name="beef">Beef</string>
+    <string name="pork">Pork</string>
+    <string name="lamb">Lamb</string>
+ 	<string name="fish">Fish</string>
+ 	<string name="lettuce">Lettuce</string>
+ 	<string name="carrot">Carrots</string>
+ 	<string name="tomato">Tomato</string>
+ 	<string name="broccoli">Broccoli</string>
+ 	<string name="mushroom">Mushrooms</string>
+ 	<string name="greenBean">Green Beans</string>
+ 	<string name="rice">Rice</string>
+ 	<string name="pasta">Pasta</string>
+ 	<string name="bread">Bread</string>
+ 	<string name="tortilla">Tortilla</string>
+ 	<string name="potato">Potato</string>
 </resources>
