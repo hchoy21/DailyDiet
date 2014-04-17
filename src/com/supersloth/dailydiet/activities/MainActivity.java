@@ -96,10 +96,9 @@ public class MainActivity extends Activity{
 			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
 					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
 					+ ", Carb: " + m.get_carbs();
-			Log.d("Name: ", log);
+			Log.d("Database Items(Chicken): ", log);
 		}
 	
-		
 		
 
 	}
