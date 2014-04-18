@@ -24,20 +24,20 @@ public class GroceryListActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grocerylist);
-		
+
 		update = (Button) findViewById(R.id.bUpdateGroceryList);
-		
-		
+
+
 		update.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v){
 
 				Log.d("Test", "Update button clicked");
-				
+
 				savePref();
 			}
 		});
-		
+
 		chicken = (CheckBox) findViewById(R.id.cbChicken);
 		beef = (CheckBox) findViewById(R.id.cbBeef);
 		pork = (CheckBox) findViewById(R.id.cbPork);
@@ -54,7 +54,7 @@ public class GroceryListActivity extends Activity{
 		tortilla = (CheckBox) findViewById(R.id.cbTortilla);
 		potato = (CheckBox) findViewById(R.id.cbPotato);
 	}
-	
+
 	public void savePref(){
 
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -75,7 +75,7 @@ public class GroceryListActivity extends Activity{
 		editor.putBoolean("bread", bread.isChecked());
 		editor.putBoolean("tortilla", tortilla.isChecked());
 		editor.putBoolean("potato", potato.isChecked());
-		
+
 		editor.commit();
 	}
 }
