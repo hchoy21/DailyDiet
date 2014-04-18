@@ -139,7 +139,15 @@
         android:layout_below="@+id/cbTortilla"
         android:text="@string/potato"
         android:onClick="onCheckBoxClicked" /> 
- 
+        
+ 	<CheckBox
+ 	    android:id="@+id/cbPasta"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_below="@+id/cbPotato"
+ 	    android:onClick="onCheckBoxClicked"
+ 	    android:text="@string/pasta" />
     
 	<Button
 	    android:id="@+id/bUpdateGroceryList"
@@ -147,7 +155,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentRight="true"
 	    android:layout_alignParentLeft="true"
-	    android:layout_below="@+id/cbPotato"
+	    android:layout_below="@+id/cbPasta"
 	    android:text="Update Grocery List" />
 
 </RelativeLayout>

@@ -52,4 +52,5 @@
  	<string name="bread">Bread</string>
  	<string name="tortilla">Tortilla</string>
  	<string name="potato">Potato</string>
+ 	<string name="backToProfile">Back</string>
 </resources>
