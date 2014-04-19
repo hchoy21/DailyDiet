@@ -10,7 +10,9 @@ import android.widget.TextView;
 import com.supersloth.dailydiet.R; 
   
 public class HealthyTipsActivity extends Activity{ 
-      
+	
+	int tipCounter = 0;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 
@@ -56,30 +58,23 @@ public class HealthyTipsActivity extends Activity{
         // Set TextViews to show a value at onCreate 
         tip.setText(tipArray[0].toString()); 
         advice.setText(adviceArray[0].toString()); 
-          
-        
         
         // When button is clicked change both TextViews 
         next.setOnClickListener(new View.OnClickListener() { 
-        	int tipCounter = 0;
             @Override
             public void onClick(View v) { 
                 
             	Log.d("Healthy Tips Activity", "next button clicked");
-                // for loop to step through array 
-                while(tipCounter < 5) { 
-                     
-                    // if i is equal to 4 then restart it back at 0 
-//                    if (i == 5) { 
-//                        i = 0; 
-//                    } 
+
+            	//if i is equal to 4 then restart it back at 0 
+            	if (tipCounter == 5) { 
+            		tipCounter = 0; 
+            	} 
                       
-                    // set TextViews to value in the array 
-                    tip.setText(tipArray[tipCounter].toString()); 
-                    advice.setText(adviceArray[tipCounter].toString()); 
-                    tipCounter++;
-                
-                }
+            	// set TextViews to value in the array 
+            	tip.setText(tipArray[tipCounter].toString()); 
+            	advice.setText(adviceArray[tipCounter].toString());
+            	tipCounter++;
             } 
         }); 
     } 
