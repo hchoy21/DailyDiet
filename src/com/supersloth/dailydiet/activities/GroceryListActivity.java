@@ -1,5 +1,8 @@
 package com.supersloth.dailydiet.activities;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -19,6 +22,8 @@ public class GroceryListActivity extends Activity{
 			rice, pasta, bread, tortilla, potato;
 	private Button update;
 			boolean checkIngredients[] = new boolean[15];
+			
+	private Map<String, Boolean> groceryMap = new HashMap<String, Boolean>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +59,7 @@ public class GroceryListActivity extends Activity{
 			public void onClick(View v){
 
 				Log.d("Test", "Update button clicked");
-
-				savePref();
+				
 			}
 		});
 	}
@@ -67,32 +71,54 @@ public class GroceryListActivity extends Activity{
 		switch(v.getId()){
 			case R.id.cbChicken: 
 				if(checked)
-					checkIngredients[0] = true;
-				
+//					savePref("chicken", chicken.isChecked());
+				break;
+			case R.id.cbBeef:
+				if(checked)
+//					savePref("beef", beef.isChecked());
+				break;
+			case R.id.cbPork:
+				if(checked)
+//					savePref("pork", pork.isChecked());
+				break;
+			case R.id.cbFish:
+				if(checked)
+//					savePref("fish", fish.isChecked());
+				break;
+			case R.id.cbLamb:
+				if(checked)
+//					savePref("lamb", lamb.isChecked());
+				break;
+			case R.id.cbMushrooms:
+				if(checked)
+//					savePref("mushrooms", mushrooms.isChecked());
+				break;
 		}
 		
 	}
 
-	public void savePref(){
+	public void savePref(String key, boolean checked){
 
 		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		Editor editor = sharedPreferences.edit();
-
-		editor.putBoolean("chicken", chicken.isChecked());
-		editor.putBoolean("beef", beef.isChecked());
-		editor.putBoolean("pork", pork.isChecked());
-		editor.putBoolean("fish", fish.isChecked());
-		editor.putBoolean("lamb", lamb.isChecked());
-		editor.putBoolean("mushrooms", mushrooms.isChecked());
-		editor.putBoolean("lettuce", lettuce.isChecked());
-		editor.putBoolean("broccoli", broccoli.isChecked());
-		editor.putBoolean("tomato", tomato.isChecked());
-		editor.putBoolean("beans", beans.isChecked());
-		editor.putBoolean("rice", rice.isChecked());
-		editor.putBoolean("pasta", pasta.isChecked());
-		editor.putBoolean("bread", bread.isChecked());
-		editor.putBoolean("tortilla", tortilla.isChecked());
-		editor.putBoolean("potato", potato.isChecked());
+		
+//		editor.putBoolean("chicken", chicken.isChecked());
+//		editor.putBoolean("beef", beef.isChecked());
+//		editor.putBoolean("pork", pork.isChecked());
+//		editor.putBoolean("fish", fish.isChecked());
+//		editor.putBoolean("lamb", lamb.isChecked());
+//		editor.putBoolean("mushrooms", mushrooms.isChecked());
+//		editor.putBoolean("lettuce", lettuce.isChecked());
+//		editor.putBoolean("broccoli", broccoli.isChecked());
+//		editor.putBoolean("tomato", tomato.isChecked());
+//		editor.putBoolean("beans", beans.isChecked());
+//		editor.putBoolean("rice", rice.isChecked());
+//		editor.putBoolean("pasta", pasta.isChecked());
+//		editor.putBoolean("bread", bread.isChecked());
+//		editor.putBoolean("tortilla", tortilla.isChecked());
+//		editor.putBoolean("potato", potato.isChecked());
+		
+		editor.putBoolean(key, checked);
 
 		editor.commit();
 	}
