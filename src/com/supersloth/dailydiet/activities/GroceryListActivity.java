@@ -18,25 +18,17 @@ public class GroceryListActivity extends Activity{
 			mushrooms, lettuce, broccoli, tomato, beans, 
 			rice, pasta, bread, tortilla, potato;
 	private Button update;
-
+			boolean checkIngredients[] = new boolean[15];
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grocerylist);
+		
+		
+		SharedPreferences sf = PreferenceManager.getDefaultSharedPreferences(this);
 
-		update = (Button) findViewById(R.id.bUpdateGroceryList);
-
-
-		update.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v){
-
-				Log.d("Test", "Update button clicked");
-
-				savePref();
-			}
-		});
 
 		chicken = (CheckBox) findViewById(R.id.cbChicken);
 		beef = (CheckBox) findViewById(R.id.cbBeef);
@@ -53,6 +45,32 @@ public class GroceryListActivity extends Activity{
 		bread = (CheckBox) findViewById(R.id.cbBread);
 		tortilla = (CheckBox) findViewById(R.id.cbTortilla);
 		potato = (CheckBox) findViewById(R.id.cbPotato);
+		
+		
+
+		update = (Button) findViewById(R.id.bUpdateGroceryList);
+		update.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v){
+
+				Log.d("Test", "Update button clicked");
+
+				savePref();
+			}
+		});
+	}
+	
+	public void onCheckBoxClicked(View v){
+		
+		boolean checked = ((CheckBox)v).isChecked();
+		
+		switch(v.getId()){
+			case R.id.cbChicken: 
+				if(checked)
+					checkIngredients[0] = true;
+				
+		}
+		
 	}
 
 	public void savePref(){

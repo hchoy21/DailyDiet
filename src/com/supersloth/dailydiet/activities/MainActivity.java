@@ -29,7 +29,7 @@ public class MainActivity extends Activity{
 		
 		Button bGroceryList = (Button) findViewById(R.id.bGroceryList);
 		Button bProfile = (Button) findViewById(R.id.bProfile);
-		Button bFavoriteDish = (Button) findViewById(R.id.bFavoriteDish);
+		Button bHealthyTips = (Button) findViewById(R.id.bHealthyTips);
 		Button bHungry = (Button) findViewById(R.id.bHungry);
 		
 		
@@ -57,11 +57,11 @@ public class MainActivity extends Activity{
 				profileButton();}});
 		
 		// go to favorite dish activity
-		bFavoriteDish.setOnClickListener(new OnClickListener() {
+		bHealthyTips.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Log.d(TAG, "Favorite dish button clicked");
-				favoriteDishesButton();}});
+				Log.d(TAG, "Healthy tips button clicked");
+				healthyTipsButton();}});
 		
 		// go to hungry activity
 		bHungry.setOnClickListener(new OnClickListener() {
@@ -121,8 +121,8 @@ public class MainActivity extends Activity{
 		startActivity(intent);
 	}
 
-	public void favoriteDishesButton(){
-		Intent intent = new Intent(this, FavoriteDishActivity.class);
+	public void healthyTipsButton(){
+		Intent intent = new Intent(this, HealthyTipsActivity.class);
 		startActivity(intent);
 	}
 	

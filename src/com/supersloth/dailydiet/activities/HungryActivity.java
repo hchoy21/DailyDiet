@@ -24,9 +24,9 @@ public class HungryActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_hungry);
 		
-		chickenTest();
+//		chickenTest();
 		
-		
+		ingredientsTest();
 		
 		
 			

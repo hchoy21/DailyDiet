@@ -4,105 +4,88 @@
     android:layout_height="match_parent" > 
    
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/tvProfileHeader"
-        android:textAppearance="?android:attr/textAppearanceLarge" /> 
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="32sp" 
+        android:gravity="center"/> 
   
     <Button
-        android:id="@+id/bSaveProfile"
+        android:id="@+id/bEditProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Save Profile" /> 
-  
-    <EditText
-        android:id="@+id/etUserProgress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/bSaveProfile"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="19dp"
-        android:ems="10"
-        android:hint="Update your Progress"
-        android:inputType="number"
-        android:textSize="20sp" /> 
+        android:text="Edit Profile" /> 
   
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etUserProgress"
         android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvName"
+        android:layout_marginTop="35dp"
         android:gravity="center"
-        android:text="Update your weight weekly"
-        android:textSize="23dp" /> 
+        android:text="Edit"
+        android:textAppearance="?android:attr/textAppearanceMedium" /> 
   
-    <EditText
-        android:id="@+id/etUserWeight"
+    <TextView
+        android:id="@+id/tvHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etUserGoal"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="17dp"
-        android:ems="10"
-        android:hint="Enter Your Starting Weight"
-        android:inputType="number"
-        android:textSize="20sp" /> 
+        android:layout_below="@+id/tvAge"
+        android:layout_marginTop="31dp"
+        android:text="Your"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:gravity="center" /> 
   
-    <EditText
-        android:id="@+id/etUserGoal"
+    <TextView
+        android:id="@+id/tvWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="17dp"
-        android:ems="10"
-        android:hint="Enter Your Goal Weight"
-        android:inputType="number"
-        android:textSize="20sp" /> 
+        android:layout_below="@+id/tvHeight"
+        android:layout_marginTop="29dp"
+        android:text="Profile."
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:gravity="center"/> 
   
-    <EditText
-        android:id="@+id/etUserHeight"
+    <TextView
+        android:id="@+id/tvGoal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etUserWeight"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="15dp"
-        android:ems="10"
-        android:hint="Enter Your Height"
-        android:inputType="number"
-        android:textSize="20sp" /> 
+        android:layout_below="@+id/tvWeight"
+        android:layout_marginTop="23dp"
+        android:text="Thank"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:gravity="center"/> 
   
-    <EditText
-        android:id="@+id/etUserAge"
+    <TextView
+        android:id="@+id/tvProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etUserHeight"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="14dp"
-        android:ems="10"
-        android:hint="Enter Your Age"
-        android:inputType="number"
-        android:textSize="20sp" > 
+        android:layout_below="@+id/tvGoal"
+        android:layout_marginTop="26dp"
+        android:text="You!"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:gravity="center"/> 
   
-          
-    </EditText> 
-  
-    <EditText
-        android:id="@+id/etUserName"
+    <TextView
+        android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/etUserAge"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="Enter Your Name"
-        android:inputType="textPersonName"
-        android:textSize="20sp" ><requestFocus /></EditText> 
+        android:layout_below="@+id/tvTip"
+        android:layout_marginTop="53dp"
+        android:text="Please"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:gravity="center"/> 
    
 </RelativeLayout>

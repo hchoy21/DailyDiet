@@ -1,85 +1,67 @@
 package com.supersloth.dailydiet.activities; 
   
-import android.app.Activity; 
+import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences; 
-import android.content.SharedPreferences.Editor; 
-import android.os.Bundle; 
-import android.preference.PreferenceManager; 
-import android.view.View; 
-import android.view.View.OnClickListener; 
-import android.widget.Button; 
-import android.widget.EditText; 
-import android.widget.Toast;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.supersloth.dailydiet.R;
   
-import com.supersloth.dailydiet.R; 
-  
-public class ProfileActivity extends Activity implements OnClickListener { 
-  
-    EditText etName; 
-    EditText etAge; 
-    EditText etHeight; 
-    EditText etWeight; 
-    EditText etGoal; 
-    EditText etProgress; 
+public class ProfileActivity extends Activity  { 
       
-    Button bSave; 
+    public static final String PREFS_NAME = "MyPreferencesFile"; 
       
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
-        // TODO Auto-generated method stub 
         super.onCreate(savedInstanceState); 
         setContentView(R.layout.activity_profile); 
           
-        etName = (EditText) findViewById(R.id.etUserName); 
-        etAge = (EditText) findViewById(R.id.etUserAge); 
-        etHeight = (EditText) findViewById(R.id.etUserHeight); 
-        etWeight = (EditText) findViewById(R.id.etUserWeight); 
-        etGoal = (EditText) findViewById(R.id.etUserGoal); 
-        etProgress = (EditText) findViewById(R.id.etUserProgress); 
+        TextView tvName = (TextView)findViewById(R.id.tvName); 
+        TextView tvAge = (TextView)findViewById(R.id.tvAge); 
+        TextView tvHeight = (TextView)findViewById(R.id.tvHeight); 
+        TextView tvWeight = (TextView)findViewById(R.id.tvWeight); 
+        TextView tvGoal = (TextView)findViewById(R.id.tvGoal); 
+        TextView tvProgress = (TextView)findViewById(R.id.tvProgress); 
           
-        bSave = (Button) findViewById(R.id.bSaveProfile); 
-        bSave.setOnClickListener(this); 
+        Button editProfile = (Button)findViewById(R.id.bEditProfile); 
           
-        loadData(); 
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0); 
+        
+//        String name = settings.getString("name", "Please").toString();
+        
+//        Log.d("Profile", settings.getString("name", "Please"));
+//        Log.d("Profile", settings.getInt("age", 18));
+//        Log.d("Profile", settings.getInt("height", 68));
+//        Log.d("Profile", settings.getInt("weight", 175));
+//        Log.d("Profile", settings.getInt("goal", 150));
+//        Log.d("Profile", settings.getInt("progress", 160));
+        
+        
+        tvName.setText(settings.getString("name", "Please")); 
+        tvAge.setText(String.valueOf(settings.getInt("age", 18))); 
+        tvHeight.setText(String.valueOf(settings.getInt("height", 68))); 
+        tvWeight.setText(String.valueOf(settings.getInt("weight", 175))); 
+        tvGoal.setText(String.valueOf(settings.getInt("goal", 150))); 
+        tvProgress.setText(String.valueOf(settings.getInt("progress", 160))); 
           
-    } 
-    
+        editProfile.setOnClickListener(new View.OnClickListener() { 
+              
+            @Override
+            public void onClick(View v) { 
+                editProfileButton();
+            } 
   
-    @Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		
-		loadData();
-	}
-
-
-	private void loadData() { 
-        // TODO Auto-generated method stub 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this); 
+        }); 
           
-        String userName = sharedPreferences.getString("userName", null); 
-          
-        etName.setText(userName); 
-        Toast toast = Toast.makeText(getApplicationContext(), "user name: " + userName, Toast.LENGTH_SHORT);
-        toast.show();
-    } 
- 
-      
-    @Override
-    public void onClick(View v) { 
-//        saveData("UserName", etName.getText().toString(), 
-//                 "UserAge", Integer.parseInt(etAge.getText().toString()), 
-//                 "UserHeight", Integer.parseInt(etHeight.getText().toString()), 
-//                 "UserWeight", Integer.parseInt(etWeight.getText().toString()), 
-//                 "UserGoal", Integer.parseInt(etGoal.getText().toString()), 
-//                 "UserProgress", Integer.parseInt(etProgress.getText().toString())); 
-          if(v.getId() == R.id.bSaveProfile){
-        	  Intent intent = new Intent(this, EditProfileActivity.class);
-        	  startActivity(intent);
-          }
-          
-    } 
-      
+    }
+    
+    
+    private void editProfileButton(){
+    	Intent intent = new Intent(this, EditProfileActivity.class);
+    	startActivity(intent);
+    }
 } 

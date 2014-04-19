@@ -14,19 +14,19 @@
         android:text="@string/groceryList" />
 
     <Button
-        android:id="@+id/bFavoriteDish"
+        android:id="@+id/bHealthyTips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bGroceryList"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:text="@string/favoriteDishes" />
+        android:text="@string/bHealthyTips" />
 
     <Button
         android:id="@+id/bHungry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/bFavoriteDish"
+        android:layout_above="@+id/bHealthyTips"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:text="@string/imHungry" />
