@@ -10,15 +10,10 @@ import android.widget.TextView;
 import com.supersloth.dailydiet.R; 
   
 public class HealthyTipsActivity extends Activity{ 
-<<<<<<< HEAD
 
 	int tipCounter = 0;
 
-=======
 	
-	int tipCounter = 0;
-	
->>>>>>> 2edd6a53cd01398f194daf56d5f505f7d66a5591
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 
@@ -50,7 +45,7 @@ public class HealthyTipsActivity extends Activity{
         adviceArray[1] = "You should stick with a daily routine. "
                 + "Go to sleep at the same time everyday and wake up at the same time everyday. "
                 + "Try to get 8 hours of sleep a night and avoid taking naps during the day as this "
-                + "will slow down your metabalism."; 
+                + "will slow down your metabolism."; 
         adviceArray[2] = "You will not see results right away. "
                 + "It is important to remember that dieting takes time and patience. "
                 + "Most results will happen slowly so you wont even notice the changes. "
