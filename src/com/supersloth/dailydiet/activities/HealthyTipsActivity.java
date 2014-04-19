@@ -10,9 +10,15 @@ import android.widget.TextView;
 import com.supersloth.dailydiet.R; 
   
 public class HealthyTipsActivity extends Activity{ 
+<<<<<<< HEAD
 
 	int tipCounter = 0;
 
+=======
+	
+	int tipCounter = 0;
+	
+>>>>>>> 2edd6a53cd01398f194daf56d5f505f7d66a5591
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 

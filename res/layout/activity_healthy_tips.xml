@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Favorites" 
-        android:textSize="28sp" /> 
+        android:text="Eating Tips"
+        android:textSize="28sp" />
   
     <Button
         android:id="@+id/bNext"
@@ -18,27 +18,28 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Next Tip" /> 
-  
+        android:text="Next Tip" />
+
     <TextView
         android:id="@+id/tvTip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/tvTodaysDate"
+        android:layout_marginTop="73dp"
         android:gravity="center"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" /> 
-  
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
     <TextView
         android:id="@+id/tvTipNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTodaysDate"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
+        android:layout_above="@+id/bNext"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="97dp"
+        android:gravity="center"
         android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:gravity="center" /> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
 </RelativeLayout> 
