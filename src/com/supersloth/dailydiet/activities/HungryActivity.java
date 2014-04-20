@@ -51,34 +51,39 @@ public class HungryActivity extends Activity{
 		ingred_carb[3] = sp.getBoolean("potato", false) ? "potato" : null;
 		ingred_carb[4] = sp.getBoolean("pasta", false) ? "pasta" : null;
 		
+		
+		
+		
+		
+		
 		List<String> listProtein = new ArrayList<String>();
 		for(int i = 0; i < ingred_protein.length; i++){
 			if(ingred_protein[i] != null){
 				listProtein.add(ingred_protein[i]);
 			}
 		}
-		List<String> listVeg = new ArrayList<String>();
-		for(int i = 0; i < ingred_veg.length; i++){
-			if(ingred_veg[i] != null){
-				listVeg.add(ingred_protein[i]);
-			}
-		}
-		List<String> listCarb = new ArrayList<String>();
-		for(int i = 0; i < ingred_carb.length; i++){
-			if(ingred_carb[i] != null){
-				listCarb.add(ingred_carb[i]);
-			}
-		}
-		
+//		List<String> listVeg = new ArrayList<String>();
+//		for(int i = 0; i < ingred_veg.length; i++){
+//			if(ingred_veg[i] != null){
+//				listVeg.add(ingred_protein[i]);
+//			}
+//		}
+//		List<String> listCarb = new ArrayList<String>();
+//		for(int i = 0; i < ingred_carb.length; i++){
+//			if(ingred_carb[i] != null){
+//				listCarb.add(ingred_carb[i]);
+//			}
+//		}
+//		
 		for(String m : listProtein){
 			Log.d("meats: ", m);
 		}
-		for(String m : listVeg){
-			Log.d("veg: ", m);
-		}
-		for(String m : listCarb){
-			Log.d("carbs: ", m);
-		}
+//		for(String m : listVeg){
+//			Log.d("veg: ", m);
+//		}
+//		for(String m : listCarb){
+//			Log.d("carbs: ", m);
+//		}
 	}
 	
 	private void chickenTest(){
