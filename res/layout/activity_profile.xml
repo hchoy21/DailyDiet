@@ -11,8 +11,7 @@
         android:layout_centerHorizontal="true"
         android:text="@string/tvProfileHeader"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="32sp" 
-        android:gravity="center"/> 
+        android:textSize="32sp" /> 
   
     <Button
         android:id="@+id/bEditProfile"
@@ -26,66 +25,118 @@
         android:id="@+id/tvAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvName"
         android:layout_marginTop="35dp"
-        android:gravity="center"
+        android:layout_toRightOf="@+id/textView2"
         android:text="Edit"
-        android:textAppearance="?android:attr/textAppearanceMedium" /> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
     <TextView
         android:id="@+id/tvHeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvAge"
         android:layout_marginTop="31dp"
+        android:layout_toRightOf="@+id/textView3"
         android:text="Your"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:gravity="center" /> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
     <TextView
         android:id="@+id/tvWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvHeight"
         android:layout_marginTop="29dp"
+        android:layout_toRightOf="@+id/textView4"
         android:text="Profile."
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:gravity="center"/> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
     <TextView
         android:id="@+id/tvGoal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvWeight"
         android:layout_marginTop="23dp"
+        android:layout_toRightOf="@+id/textView5"
         android:text="Thank"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:gravity="center"/> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
     <TextView
         android:id="@+id/tvProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvGoal"
         android:layout_marginTop="26dp"
+        android:layout_toRightOf="@+id/textView6"
         android:text="You!"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:gravity="center"/> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
   
     <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/tvTip"
         android:layout_marginTop="53dp"
+        android:layout_toRightOf="@+id/textView1"
         android:text="Please"
-        android:textAppearance="?android:attr/textAppearanceMedium" 
-        android:gravity="center"/> 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvName"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_alignParentLeft="true"
+        android:text="Name: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvAge"
+        android:layout_alignParentLeft="true"
+        android:text="Age (years): "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHeight"
+        android:layout_alignBottom="@+id/tvHeight"
+        android:layout_alignParentLeft="true"
+        android:text="Height (in): "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWeight"
+        android:layout_alignBottom="@+id/tvWeight"
+        android:layout_alignParentLeft="true"
+        android:text="Starting Weight: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvProgress"
+        android:layout_alignParentLeft="true"
+        android:text="Goal Weight: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvProgress"
+        android:layout_alignBottom="@+id/tvProgress"
+        android:layout_alignParentLeft="true"
+        android:text="Your Progress: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
    
 </RelativeLayout>
