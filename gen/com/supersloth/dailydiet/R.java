@@ -12,8 +12,21 @@ public final class R {
     }
     public static final class drawable {
         public static final int bbqchickenwings=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int slothsplash=0x7f020002;
+        public static final int beefstew=0x7f020001;
+        public static final int beefstroganoff=0x7f020002;
+        public static final int chickenburrito=0x7f020003;
+        public static final int chickenpenne=0x7f020004;
+        public static final int chickenteriyaki=0x7f020005;
+        public static final int fishtacos=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int porkmedallions=0x7f020008;
+        public static final int salmongreenbeans=0x7f020009;
+        public static final int slothsplash=0x7f02000a;
+        public static final int spaghettimeatballs=0x7f02000b;
+        public static final int tunasalad=0x7f02000c;
+        public static final int tunasandwich=0x7f02000d;
+        public static final int turkeycutlets=0x7f02000e;
+        public static final int turkeysandwich=0x7f02000f;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f070000;

@@ -17,6 +17,9 @@ public class HungryActivity extends Activity{
 	private String ingred_protein[] = new String[5];
 	private String ingred_veg[] = new String[5];
 	private String ingred_carb[] = new String[5];
+	private List<String> listProtein = new ArrayList<String>();
+	private List<String> listVeg = new ArrayList<String>();
+	private List<String> listCarb = new ArrayList<String>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -52,52 +55,22 @@ public class HungryActivity extends Activity{
 		ingred_carb[4] = sp.getBoolean("pasta", false) ? "pasta" : null;
 		
 		
-		
-		
-		
-		
-		List<String> listProtein = new ArrayList<String>();
+		// separate and add user's groceries into the 3 categories
 		for(int i = 0; i < ingred_protein.length; i++){
-			if(ingred_protein[i] != null){
+			if(ingred_protein[i] != null)
 				listProtein.add(ingred_protein[i]);
-			}
 		}
-//		List<String> listVeg = new ArrayList<String>();
-//		for(int i = 0; i < ingred_veg.length; i++){
-//			if(ingred_veg[i] != null){
-//				listVeg.add(ingred_protein[i]);
-//			}
-//		}
-//		List<String> listCarb = new ArrayList<String>();
-//		for(int i = 0; i < ingred_carb.length; i++){
-//			if(ingred_carb[i] != null){
-//				listCarb.add(ingred_carb[i]);
-//			}
-//		}
-//		
-		for(String m : listProtein){
-			Log.d("meats: ", m);
+		for(int i = 0; i < ingred_veg.length; i++){
+			if(ingred_veg[i] != null)
+				listVeg.add(ingred_protein[i]);
 		}
-//		for(String m : listVeg){
-//			Log.d("veg: ", m);
-//		}
-//		for(String m : listCarb){
-//			Log.d("carbs: ", m);
-//		}
+		for(int i = 0; i < ingred_carb.length; i++){
+			if(ingred_carb[i] != null)
+				listCarb.add(ingred_carb[i]);
+		}
+		
+		
+		
 	}
-	
-	private void chickenTest(){
-		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-		boolean t;
-
-		t=sharedPreferences.getBoolean("chicken", false);
-
-		if(t){
-			Toast.makeText(getApplicationContext(), "I have chicken!", Toast.LENGTH_SHORT).show();
-		}
-		else{
-			Toast.makeText(getApplicationContext(), "No chicken for me :(", Toast.LENGTH_SHORT).show();
-		}
-	}
 }

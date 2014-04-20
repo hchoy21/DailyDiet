@@ -22,9 +22,6 @@ public class GroceryListActivity extends Activity{
 			mushrooms, lettuce, broccoli, tomato, beans, 
 			rice, pasta, bread, tortilla, potato;
 	private Button update;
-			boolean checkIngredients[] = new boolean[15];
-			
-	private Map<String, Boolean> groceryMap = new HashMap<String, Boolean>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +30,6 @@ public class GroceryListActivity extends Activity{
 		setContentView(R.layout.activity_grocerylist);
 		
 		
-		SharedPreferences sf = PreferenceManager.getDefaultSharedPreferences(this);
-
-
 		chicken = (CheckBox) findViewById(R.id.cbChicken);
 		beef = (CheckBox) findViewById(R.id.cbBeef);
 		pork = (CheckBox) findViewById(R.id.cbPork);

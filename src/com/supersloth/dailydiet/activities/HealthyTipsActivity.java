@@ -13,7 +13,6 @@ public class HealthyTipsActivity extends Activity{
 
 	int tipCounter = 0;
 
-	
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 

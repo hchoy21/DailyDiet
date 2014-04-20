@@ -71,19 +71,21 @@ public class MainActivity extends Activity{
 				hungryButton();}});
 		
 		
-		// create db
+		
+		
+/****************************************** DATABASE ******************************************/
 		MealDBHandler db = new MealDBHandler(this);
 		
 		// insert meals
 		Log.d("Insert: ", "Inserting ..");
-		db.addMeal(new Meal(1, "Spaghetti and Meatballs", "beef", null, "pasta"));
-		db.addMeal(new Meal(2, "Chicken Fried Rice", "chicken", "carrot", "rice"));
-		db.addMeal(new Meal(3, "Black and White Sesame Chicken", "chicken", "tomato", null));
-		db.addMeal(new Meal(4, "Grilled Salmon", "fish", "lettuce", null));
-		db.addMeal(new Meal(5, "Chik Fil A Sandwich", "chicken", "pickle", "bread"));
+		db.addMeal(new Meal(1, "Beef Stew", "beef", "carrot", "potato"));
+		db.addMeal(new Meal(2, "Beef Stroganoff", "beef", "mushroom", "rice"));
+		db.addMeal(new Meal(3, "Chicken Burrito", "chicken", "tomato", "tortilla"));
+		db.addMeal(new Meal(4, "Chicken Penne", "chicken", "broccoli", "pasta"));
+		db.addMeal(new Meal(5, "Chicken Teriyaki", "chicken", "broccoli", "rice"));
 		mealsList = db.getAllMeals();
 		
-		chickenMeals = db.getMealsProtein("chicken");
+//		chickenMeals = db.getMealsProtein("chicken");
 		
 //		for(Meal m : mealsList){
 //			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
@@ -91,6 +93,7 @@ public class MainActivity extends Activity{
 //					+ ", Carb: " + m.get_carbs();
 //			Log.d("Name: ", log);
 //		}
+		
 		
 		for(Meal m : chickenMeals){
 			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
@@ -103,6 +106,18 @@ public class MainActivity extends Activity{
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/****************************************** Button Methods ******************************************/
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
