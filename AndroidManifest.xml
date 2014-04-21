@@ -8,8 +8,6 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="16" />
     <uses-feature android:name=""/>
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"

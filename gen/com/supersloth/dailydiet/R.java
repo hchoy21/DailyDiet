@@ -30,9 +30,9 @@ public final class R {
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f070000;
-        public static final int action_search=0x7f070035;
-        public static final int action_settings=0x7f070034;
-        public static final int bEditProfile=0x7f070026;
+        public static final int action_search=0x7f070033;
+        public static final int action_settings=0x7f070032;
+        public static final int bEditProfile=0x7f070024;
         public static final int bGroceryList=0x7f07001d;
         public static final int bHealthyTips=0x7f07001e;
         public static final int bHungry=0x7f07001f;
@@ -40,7 +40,6 @@ public final class R {
         public static final int bProfile=0x7f070020;
         public static final int bSaveProfile=0x7f070002;
         public static final int bUpdateGroceryList=0x7f070019;
-        public static final int btnCapturePicture=0x7f070024;
         public static final int cbBeans=0x7f070013;
         public static final int cbBeef=0x7f07000b;
         public static final int cbBread=0x7f070015;
@@ -63,26 +62,25 @@ public final class R {
         public static final int etProgress=0x7f070008;
         public static final int etWeight=0x7f070006;
         public static final int imageButton1=0x7f070022;
-        public static final int imgPreview=0x7f070025;
-        public static final int superslothLogo=0x7f070033;
-        public static final int textView1=0x7f070032;
-        public static final int textView2=0x7f070029;
-        public static final int textView3=0x7f07002b;
-        public static final int textView4=0x7f07002d;
-        public static final int textView5=0x7f07002f;
-        public static final int textView6=0x7f070031;
-        public static final int tvAge=0x7f070027;
+        public static final int superslothLogo=0x7f070031;
+        public static final int textView1=0x7f070030;
+        public static final int textView2=0x7f070027;
+        public static final int textView3=0x7f070029;
+        public static final int textView4=0x7f07002b;
+        public static final int textView5=0x7f07002d;
+        public static final int textView6=0x7f07002f;
+        public static final int tvAge=0x7f070025;
         public static final int tvCalendarDietMain=0x7f070021;
-        public static final int tvGoal=0x7f07002e;
+        public static final int tvGoal=0x7f07002c;
         public static final int tvGroceryListTitle=0x7f070009;
-        public static final int tvHeight=0x7f07002a;
-        public static final int tvName=0x7f070028;
-        public static final int tvProgress=0x7f070030;
+        public static final int tvHeight=0x7f070028;
+        public static final int tvName=0x7f070026;
+        public static final int tvProgress=0x7f07002e;
         public static final int tvTip=0x7f070001;
         public static final int tvTipNum=0x7f07001c;
         public static final int tvTodaysDate=0x7f07001a;
         public static final int tvTodaysMeal=0x7f070023;
-        public static final int tvWeight=0x7f07002c;
+        public static final int tvWeight=0x7f07002a;
     }
     public static final class layout {
         public static final int activity_edit_profile=0x7f030000;
@@ -90,9 +88,8 @@ public final class R {
         public static final int activity_healthy_tips=0x7f030002;
         public static final int activity_hungry=0x7f030003;
         public static final int activity_main=0x7f030004;
-        public static final int activity_picture=0x7f030005;
-        public static final int activity_profile=0x7f030006;
-        public static final int splash_screen=0x7f030007;
+        public static final int activity_profile=0x7f030005;
+        public static final int splash_screen=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f060000;
