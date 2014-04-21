@@ -67,12 +67,6 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return meal;
 	}
 	
-//	public Meal getChickenMeals(){
-//		SQLiteDatabase db = this.getReadableDatabase();
-//
-//		// select KEY_NAME from TABLE_MEALS where KEY_PROTEIN having chicken
-//	}
-	
 	
 	/**
 	 * queries the database and returns a list of all meals
@@ -142,8 +136,8 @@ public class MealDBHandler extends SQLiteOpenHelper{
 				
 		return meals;
 	}
-
-	public List<Meal> getMealsCarb(String carb){
+	
+	public List<Meal> getMealsVeg(String veg){
 		List<Meal> meals = new ArrayList<Meal>();
 		
 		SQLiteDatabase db = this.getWritableDatabase();
@@ -155,8 +149,8 @@ public class MealDBHandler extends SQLiteOpenHelper{
 						KEY_VEG,
 						KEY_CARB
 				}, 
-				KEY_CARB + "=" + carb, 
-				null,
+				KEY_PROTEIN + "=?",
+				new String[] {veg},
 				null, 
 				null, 
 				null, 
@@ -169,7 +163,43 @@ public class MealDBHandler extends SQLiteOpenHelper{
 				meal.set_name(cursor.getString(1));
 				meal.set_protein(cursor.getString(2));
 				meal.set_veg(cursor.getString(3));
-				meal.set_carbs(cursor.getColumnName(4));
+				meal.set_carbs(cursor.getString(4));
+				
+				meals.add(meal);
+
+			}while(cursor.moveToNext());
+		}
+				
+		return meals;
+	}
+	
+	public List<Meal> getMealsCarb(String carb){
+		List<Meal> meals = new ArrayList<Meal>();
+		
+		SQLiteDatabase db = this.getWritableDatabase();
+		
+		Cursor cursor = db.query(true, TABLE_MEALS, new String[] {
+						KEY_ID,
+						KEY_NAME,
+						KEY_PROTEIN, 
+						KEY_VEG,
+						KEY_CARB
+				}, 
+				KEY_PROTEIN + "=?",
+				new String[] {carb},
+				null, 
+				null, 
+				null, 
+				null);
+		
+		if(cursor.moveToFirst()){
+			do{
+				Meal meal = new Meal();
+				meal.set_id(Integer.parseInt(cursor.getString(0)));
+				meal.set_name(cursor.getString(1));
+				meal.set_protein(cursor.getString(2));
+				meal.set_veg(cursor.getString(3));
+				meal.set_carbs(cursor.getString(4));
 				
 				meals.add(meal);
 
