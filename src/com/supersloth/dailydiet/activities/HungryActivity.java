@@ -14,6 +14,9 @@ import com.supersloth.dailydiet.R;
 
 public class HungryActivity extends Activity{
 
+	
+	final static String TAG = "Hungry Activity";
+	
 	private String ingred_protein[] = new String[5];
 	private String ingred_veg[] = new String[5];
 	private String ingred_carb[] = new String[5];
@@ -42,7 +45,7 @@ public class HungryActivity extends Activity{
 		ingred_protein[1] = sp.getBoolean("beef", false) ? "beef" : null;
 		ingred_protein[2] = sp.getBoolean("pork", false) ? "pork" : null;
 		ingred_protein[3] = sp.getBoolean("fish", false) ? "fish" : null;
-		ingred_protein[4] = sp.getBoolean("lamb", false) ? "lamb" : null;
+		ingred_protein[4] = sp.getBoolean("turkey", false) ? "turkey" : null;
 		ingred_veg[0] = sp.getBoolean("mushrooms", false) ? "mushrooms" : null;
 		ingred_veg[1] = sp.getBoolean("lettuce", false) ? "lettuce" : null;
 		ingred_veg[2] = sp.getBoolean("broccoli", false) ? "broccoli" : null;
@@ -69,7 +72,12 @@ public class HungryActivity extends Activity{
 				listCarb.add(ingred_carb[i]);
 		}
 		
-		
+		for(String m : listProtein)
+			Log.d(TAG + "- Protein:", m + ", ");
+		for(String m : listVeg)
+			Log.d(TAG + "- Veg:", m + ", ");
+		for(String m : listCarb)
+			Log.d(TAG + "- Carb:", m + ", ");
 		
 	}
 

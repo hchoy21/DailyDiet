@@ -49,22 +49,22 @@
         android:layout_below="@+id/cbPork"
         android:text="@string/fish"
         android:onClick="onCheckBoxClicked" />
-
+    
     <CheckBox
-        android:id="@+id/cbLamb"
+        android:id="@+id/cbTurkey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/cbFish"
-        android:text="@string/lamb"
-        android:onClick="onCheckBoxClicked" />
+        android:onClick="onCheckBoxClicked"
+        android:text="@string/turkey" />
     
     <CheckBox
         android:id="@+id/cbMushrooms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/cbLamb"
+        android:layout_below="@+id/cbTurkey"
         android:text="@string/mushroom"
         android:onClick="onCheckBoxClicked" />    
 

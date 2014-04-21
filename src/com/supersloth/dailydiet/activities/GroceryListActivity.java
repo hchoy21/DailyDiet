@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.supersloth.dailydiet.R;
 
 public class GroceryListActivity extends Activity{
-	private CheckBox chicken, beef, pork, fish, lamb, 
+	private CheckBox chicken, beef, pork, fish, turkey,
 			mushrooms, lettuce, broccoli, tomato, beans, 
 			rice, pasta, bread, tortilla, potato;
 	private Button update;
@@ -34,7 +34,7 @@ public class GroceryListActivity extends Activity{
 		beef = (CheckBox) findViewById(R.id.cbBeef);
 		pork = (CheckBox) findViewById(R.id.cbPork);
 		fish = (CheckBox) findViewById(R.id.cbFish);
-		lamb = (CheckBox) findViewById(R.id.cbLamb);
+		turkey = (CheckBox) findViewById(R.id.cbTurkey);
 		mushrooms = (CheckBox) findViewById(R.id.cbMushrooms);
 		lettuce = (CheckBox) findViewById(R.id.cbLettuce);
 		broccoli = (CheckBox) findViewById(R.id.cbBroccoli);
@@ -73,24 +73,34 @@ public class GroceryListActivity extends Activity{
 				}
 				break;
 			case R.id.cbBeef:
-				if(checked)
-
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "beef clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				break;
 			case R.id.cbPork:
-				if(checked)
-
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "pork clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				break;
 			case R.id.cbFish:
-				if(checked)
-
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "fish clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				break;
-			case R.id.cbLamb:
-				if(checked)
-
+			case R.id.cbTurkey:
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "turkey clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				break;
 			case R.id.cbMushrooms:
-				if(checked)
-
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "mushroom clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
 				break;
 		}
 		
@@ -105,7 +115,7 @@ public class GroceryListActivity extends Activity{
 		editor.putBoolean("beef", beef.isChecked());
 		editor.putBoolean("pork", pork.isChecked());
 		editor.putBoolean("fish", fish.isChecked());
-		editor.putBoolean("lamb", lamb.isChecked());
+		editor.putBoolean("turkey", turkey.isChecked());
 		editor.putBoolean("mushrooms", mushrooms.isChecked());
 		editor.putBoolean("lettuce", lettuce.isChecked());
 		editor.putBoolean("broccoli", broccoli.isChecked());

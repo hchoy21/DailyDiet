@@ -83,6 +83,14 @@ public class MainActivity extends Activity{
 		db.addMeal(new Meal(3, "Chicken Burrito", "chicken", "tomato", "tortilla"));
 		db.addMeal(new Meal(4, "Chicken Penne", "chicken", "broccoli", "pasta"));
 		db.addMeal(new Meal(5, "Chicken Teriyaki", "chicken", "broccoli", "rice"));
+		db.addMeal(new Meal(6, "Fish Tacos", "fish", "lettuce", "tortilla"));
+		db.addMeal(new Meal(7, "Pork Medallions", "pork", "carrots", null));
+		db.addMeal(new Meal(8, "Salmon and Green Beans", "fish", "beans", "rice"));
+		db.addMeal(new Meal(9, "Spaghetti and Meatballs", "beef", "tomato", "pasta"));
+		db.addMeal(new Meal(10, "Tuna Sandwich", "fish", "lettuce", "bread"));
+		db.addMeal(new Meal(11, "Tuna Salad", "fish", "lettuce", "bread"));
+		db.addMeal(new Meal(12, "Turkey Cutlets", "turkey", "beans", null));
+		db.addMeal(new Meal(13, "Turkey Sandwich", "turkey", "lettuce", "bread"));
 		mealsList = db.getAllMeals();
 		
 //		chickenMeals = db.getMealsProtein("chicken");
@@ -95,11 +103,11 @@ public class MainActivity extends Activity{
 //		}
 		
 		
-		for(Meal m : chickenMeals){
+		for(Meal m : mealsList){
 			String log = "Id: " + m.get_id() + ", Name: " + m.get_name()
 					+ ", Meat: " + m.get_protein() + ", Vegetable: " + m.get_veg()
 					+ ", Carb: " + m.get_carbs();
-			Log.d("Database Items(Chicken): ", log);
+			Log.d("Database Items(All): ", log);
 		}
 	
 		
