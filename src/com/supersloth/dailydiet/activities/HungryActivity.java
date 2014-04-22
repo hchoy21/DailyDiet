@@ -13,15 +13,15 @@ import com.supersloth.dailydiet.R;
  
 public class HungryActivity extends Activity{
  
-    int size = 4;
-    int num;
-    Random rand = new Random();
-    TextView snackName;
-    TextView snackDescription;
-    String[] nameArray = new String[size];
-    String[] descriptionArray = new String[size];
-    ImageView image;
-    Button nextSnack;
+	private int size = 4;
+	private int num;
+	private Random rand = new Random();
+	private TextView snackName;
+	private TextView snackDescription;
+	private String[] nameArray = new String[size];
+	private String[] descriptionArray = new String[size];
+	private ImageView image;
+	private Button nextSnack;
      
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 

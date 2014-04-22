@@ -11,31 +11,39 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int bbqchickenwings=0x7f020000;
-        public static final int beefstew=0x7f020001;
-        public static final int beefstroganoff=0x7f020002;
-        public static final int carrots=0x7f020003;
-        public static final int chickenburrito=0x7f020004;
-        public static final int chickenpenne=0x7f020005;
-        public static final int chickenteriyaki=0x7f020006;
-        public static final int fishtacos=0x7f020007;
-        public static final int granolabar=0x7f020008;
-        public static final int grapes=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
-        public static final int porkmedallions=0x7f02000b;
-        public static final int salmongreenbeans=0x7f02000c;
-        public static final int slothsplash=0x7f02000d;
-        public static final int spaghettimeatballs=0x7f02000e;
-        public static final int tunasalad=0x7f02000f;
-        public static final int tunasandwich=0x7f020010;
-        public static final int turkeycutlets=0x7f020011;
-        public static final int turkeysandwich=0x7f020012;
-        public static final int yogurt=0x7f020013;
+        public static final int alcohol=0x7f020000;
+        public static final int bbqchickenwings=0x7f020001;
+        public static final int beefstew=0x7f020002;
+        public static final int beefstroganof=0x7f020003;
+        public static final int beefstroganoff=0x7f020004;
+        public static final int carrots=0x7f020005;
+        public static final int chickenburrito=0x7f020006;
+        public static final int chickenpenne=0x7f020007;
+        public static final int chickenteriyaki=0x7f020008;
+        public static final int fishtacos=0x7f020009;
+        public static final int granolabar=0x7f02000a;
+        public static final int grapes=0x7f02000b;
+        public static final int ic_launcher=0x7f02000c;
+        public static final int meals=0x7f02000d;
+        public static final int motivation=0x7f02000e;
+        public static final int porkmedallions=0x7f02000f;
+        public static final int recipebutton=0x7f020010;
+        public static final int salmon=0x7f020011;
+        public static final int sleep=0x7f020012;
+        public static final int slothsplash=0x7f020013;
+        public static final int spaghettiwithmeatballs=0x7f020014;
+        public static final int tunasalad=0x7f020015;
+        public static final int tunasandwich=0x7f020016;
+        public static final int turkeycutlets=0x7f020017;
+        public static final int turkeysandwich=0x7f020018;
+        public static final int water=0x7f020019;
+        public static final int yogurt=0x7f02001a;
     }
     public static final class id {
+        public static final int GlobalLayout=0x7f070035;
         public static final int RelativeLayout1=0x7f070000;
-        public static final int action_search=0x7f070037;
-        public static final int action_settings=0x7f070036;
+        public static final int action_search=0x7f07003c;
+        public static final int action_settings=0x7f07003b;
         public static final int bEditProfile=0x7f070028;
         public static final int bGroceryList=0x7f070021;
         public static final int bHealthyTips=0x7f070022;
@@ -66,9 +74,10 @@ public final class R {
         public static final int etName=0x7f070003;
         public static final int etProgress=0x7f070008;
         public static final int etWeight=0x7f070006;
-        public static final int imageButton1=0x7f070026;
+        public static final int imageButton1=0x7f070027;
+        public static final int imgRecipePic=0x7f070037;
         public static final int imgTastyPic=0x7f07001e;
-        public static final int superslothLogo=0x7f070035;
+        public static final int superslothLogo=0x7f07003a;
         public static final int textView1=0x7f070034;
         public static final int textView2=0x7f07002b;
         public static final int textView3=0x7f07002d;
@@ -82,12 +91,15 @@ public final class R {
         public static final int tvHeight=0x7f07002c;
         public static final int tvName=0x7f07002a;
         public static final int tvProgress=0x7f070032;
+        public static final int tvRecipeDescrip=0x7f070039;
+        public static final int tvRecipeIngredients=0x7f070038;
+        public static final int tvRecipeName=0x7f070036;
         public static final int tvSnackInfo=0x7f07001f;
         public static final int tvSnackName=0x7f07001d;
         public static final int tvTip=0x7f070001;
         public static final int tvTipNum=0x7f07001c;
         public static final int tvTodaysDate=0x7f07001a;
-        public static final int tvTodaysMeal=0x7f070027;
+        public static final int tvTodaysMeal=0x7f070026;
         public static final int tvWeight=0x7f07002e;
     }
     public static final class layout {
@@ -97,7 +109,8 @@ public final class R {
         public static final int activity_hungry=0x7f030003;
         public static final int activity_main=0x7f030004;
         public static final int activity_profile=0x7f030005;
-        public static final int splash_screen=0x7f030006;
+        public static final int activity_recipe=0x7f030006;
+        public static final int splash_screen=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f060000;

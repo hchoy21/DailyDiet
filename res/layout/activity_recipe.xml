@@ -1,0 +1,50 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+ 
+    <LinearLayout
+        android:id="@+id/GlobalLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+ 
+        <TextView
+            android:id="@+id/tvSnackName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Recipe"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+ 
+        <TextView
+            android:id="@+id/tvRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Chicken Burrito"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+        <ImageView
+            android:id="@+id/imgRecipePic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chickenburrito" />
+                
+        <TextView
+            android:id="@+id/tvRecipeIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Ingredients"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+        <TextView
+            android:id="@+id/tvRecipeDescrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Description"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+ 
+</ScrollView>

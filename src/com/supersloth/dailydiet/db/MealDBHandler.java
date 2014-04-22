@@ -222,7 +222,7 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		db.insert(TABLE_MEALS, null, values);
 		db.close();
 	}
-	
+
 	public List<Meal> getAvailableMeals(List<String> proteins,
 			List<String> vegs, List<String> carbs) {
 
@@ -255,10 +255,10 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		}
 
 		// select query
-		String select = "SELECT *" + " FROM " + TABLE_MEALS
-				+ " WHERE (" + KEY_PROTEIN + " in (" + proteinList + ") AND "
-				+ KEY_VEG + " in (" + vegList + ") AND " + KEY_CARB + " in ("
-				+ carbList + "))";
+		String select = "SELECT * FROM " + TABLE_MEALS + " WHERE ("
+				+ KEY_PROTEIN + " in (" + proteinList + ") AND " + KEY_VEG
+				+ " in (" + vegList + ") AND " + KEY_CARB + " in (" + carbList
+				+ "))";
 
 		SQLiteDatabase db = this.getWritableDatabase();
 		Cursor cursor = db.rawQuery(select, null);
@@ -268,10 +268,10 @@ public class MealDBHandler extends SQLiteOpenHelper{
 			do {
 				Meal meal = new Meal();
 				meal.set_id(Integer.parseInt(cursor.getString(0)));
-				meal.set_name(cursor.getString(0));
-				meal.set_protein(cursor.getString(1));
-				meal.set_veg(cursor.getString(2));
-				meal.set_carbs(cursor.getString(3));
+				meal.set_name(cursor.getString(1));
+				meal.set_protein(cursor.getString(2));
+				meal.set_veg(cursor.getString(3));
+				meal.set_carbs(cursor.getString(4));
 
 				mealList.add(meal);
 
