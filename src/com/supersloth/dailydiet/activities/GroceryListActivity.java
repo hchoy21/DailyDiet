@@ -19,7 +19,7 @@ import com.supersloth.dailydiet.R;
 
 public class GroceryListActivity extends Activity{
 	private CheckBox chicken, beef, pork, fish, turkey,
-			mushrooms, lettuce, broccoli, tomato, beans, 
+			mushroom, lettuce, broccoli, tomato, bean, 
 			rice, pasta, bread, tortilla, potato;
 	private Button update;
 	
@@ -35,18 +35,35 @@ public class GroceryListActivity extends Activity{
 		pork = (CheckBox) findViewById(R.id.cbPork);
 		fish = (CheckBox) findViewById(R.id.cbFish);
 		turkey = (CheckBox) findViewById(R.id.cbTurkey);
-		mushrooms = (CheckBox) findViewById(R.id.cbMushrooms);
+		mushroom = (CheckBox) findViewById(R.id.cbMushrooms);
 		lettuce = (CheckBox) findViewById(R.id.cbLettuce);
 		broccoli = (CheckBox) findViewById(R.id.cbBroccoli);
 		tomato = (CheckBox) findViewById(R.id.cbTomato);
-		beans = (CheckBox) findViewById(R.id.cbBeans);
+		bean = (CheckBox) findViewById(R.id.cbBeans);
 		rice = (CheckBox) findViewById(R.id.cbRice);
 		pasta = (CheckBox) findViewById(R.id.cbPasta);
 		bread = (CheckBox) findViewById(R.id.cbBread);
 		tortilla = (CheckBox) findViewById(R.id.cbTortilla);
 		potato = (CheckBox) findViewById(R.id.cbPotato);
 		
+		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
 		
+		chicken.setChecked(sp.getBoolean("chicken", false));
+	 	beef.setChecked(sp.getBoolean("beef", false));
+	 	pork.setChecked(sp.getBoolean("pork", false));
+	 	fish.setChecked(sp.getBoolean("fish", false));
+	 	turkey.setChecked(sp.getBoolean("turkey", false));
+	 	mushroom.setChecked(sp.getBoolean("mushroom", false));
+	 	lettuce.setChecked(sp.getBoolean("lettuce", false));
+	 	broccoli.setChecked(sp.getBoolean("broccoli", false));
+	 	tomato.setChecked(sp.getBoolean("tomato", false));
+	 	bean.setChecked(sp.getBoolean("bean", false));
+	 	rice.setChecked(sp.getBoolean("rice", false));
+	 	pasta.setChecked(sp.getBoolean("pasta", false));
+	 	bread.setChecked(sp.getBoolean("bread", false));
+	 	tortilla.setChecked(sp.getBoolean("tortilla", false));
+	 	potato.setChecked(sp.getBoolean("potato", false));
+
 
 		update = (Button) findViewById(R.id.bUpdateGroceryList);
 		update.setOnClickListener(new OnClickListener() {
@@ -59,8 +76,37 @@ public class GroceryListActivity extends Activity{
 				savePref();
 			}
 		});
+		
 	}
 	
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		
+		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		chicken.setChecked(sp.getBoolean("chicken", false));
+	 	beef.setChecked(sp.getBoolean("beef", false));
+	 	pork.setChecked(sp.getBoolean("pork", false));
+	 	fish.setChecked(sp.getBoolean("fish", false));
+	 	turkey.setChecked(sp.getBoolean("turkey", false));
+	 	mushroom.setChecked(sp.getBoolean("mushroom", false));
+	 	lettuce.setChecked(sp.getBoolean("lettuce", false));
+	 	broccoli.setChecked(sp.getBoolean("broccoli", false));
+	 	tomato.setChecked(sp.getBoolean("tomato", false));
+	 	bean.setChecked(sp.getBoolean("beans", false));
+	 	rice.setChecked(sp.getBoolean("rice", false));
+	 	pasta.setChecked(sp.getBoolean("pasta", false));
+	 	bread.setChecked(sp.getBoolean("bread", false));
+	 	tortilla.setChecked(sp.getBoolean("tortilla", false));
+	 	potato.setChecked(sp.getBoolean("potato", false));
+	}
+
+
+
 	public void onCheckBoxClicked(View v){
 		
 		boolean checked = ((CheckBox)v).isChecked();
@@ -102,6 +148,30 @@ public class GroceryListActivity extends Activity{
 					toast.show();
 				}
 				break;
+			case R.id.cbLettuce:
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "lettuce clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
+				break;
+			case R.id.cbBroccoli:
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "broccoli clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
+				break;
+			case R.id.cbTomato:
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "tomato clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
+				break;
+			case R.id.cbBeans:
+				if(checked){
+					Toast toast = Toast.makeText(getApplicationContext(), "beans clicked", Toast.LENGTH_SHORT);
+					toast.show();
+				}
+				break;
 		}
 		
 	}
@@ -116,18 +186,21 @@ public class GroceryListActivity extends Activity{
 		editor.putBoolean("pork", pork.isChecked());
 		editor.putBoolean("fish", fish.isChecked());
 		editor.putBoolean("turkey", turkey.isChecked());
-		editor.putBoolean("mushrooms", mushrooms.isChecked());
+		editor.putBoolean("mushrooms", mushroom.isChecked());
 		editor.putBoolean("lettuce", lettuce.isChecked());
 		editor.putBoolean("broccoli", broccoli.isChecked());
 		editor.putBoolean("tomato", tomato.isChecked());
-		editor.putBoolean("beans", beans.isChecked());
+		editor.putBoolean("beans", bean.isChecked());
 		editor.putBoolean("rice", rice.isChecked());
 		editor.putBoolean("pasta", pasta.isChecked());
 		editor.putBoolean("bread", bread.isChecked());
 		editor.putBoolean("tortilla", tortilla.isChecked());
 		editor.putBoolean("potato", potato.isChecked());
 		
+		
+		
 
 		editor.commit();
+
 	}
 }

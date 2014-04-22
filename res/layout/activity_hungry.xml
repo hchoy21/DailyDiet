@@ -2,14 +2,50 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
+ 
     <TextView
         android:id="@+id/tvTodaysDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="I'm Hungry" 
+        android:text="I'm Hungry"
         android:textSize="28sp" />
-
+ 
+    <TextView
+        android:id="@+id/tvSnackName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTodaysDate"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+    <ImageView
+        android:id="@+id/imgTastyPic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSnackName"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/yogurt" />
+ 
+    <TextView
+        android:id="@+id/tvSnackInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imgTastyPic"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+ 
+    <Button
+        android:id="@+id/bNextSnack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Next Snack" />
+ 
 </RelativeLayout>

@@ -168,7 +168,7 @@ public class MealDBHandler extends SQLiteOpenHelper{
 				meals.add(meal);
 
 			}while(cursor.moveToNext());
-		}
+		} 
 				
 		return meals;
 	}
@@ -222,6 +222,65 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		db.insert(TABLE_MEALS, null, values);
 		db.close();
 	}
+	
+	public List<Meal> getAvailableMeals(List<String> proteins,
+			List<String> vegs, List<String> carbs) {
+
+		if (proteins.size() == 0 || vegs.size() == 0 || carbs.size() == 0) {
+			return null;
+		}
+
+		List<Meal> mealList = new ArrayList<Meal>();
+
+		String proteinList, vegList, carbList;
+
+		proteinList = "'" + proteins.get(0) + "'";
+		vegList = "'" + vegs.get(0) + "'";
+		carbList = "'" + carbs.get(0) + "'";
+
+		if (proteins.size() != 1) {
+			for (String protein : proteins) {
+				proteinList += ", '" + protein + "'";
+			}
+		}
+		if (vegs.size() != 1) {
+			for (String veg : vegs) {
+				vegList += ", '" + veg + "'";
+			}
+		}
+		if (carbs.size() != 1) {
+			for (String carb : carbs) {
+				carbList += ", '" + carb + "'";
+			}
+		}
+
+		// select query
+		String select = "SELECT *" + " FROM " + TABLE_MEALS
+				+ " WHERE (" + KEY_PROTEIN + " in (" + proteinList + ") AND "
+				+ KEY_VEG + " in (" + vegList + ") AND " + KEY_CARB + " in ("
+				+ carbList + "))";
+
+		SQLiteDatabase db = this.getWritableDatabase();
+		Cursor cursor = db.rawQuery(select, null);
+
+		// loop through all rows and add to list
+		if (cursor.moveToFirst()) {
+			do {
+				Meal meal = new Meal();
+				meal.set_id(Integer.parseInt(cursor.getString(0)));
+				meal.set_name(cursor.getString(0));
+				meal.set_protein(cursor.getString(1));
+				meal.set_veg(cursor.getString(2));
+				meal.set_carbs(cursor.getString(3));
+
+				mealList.add(meal);
+
+			} while (cursor.moveToNext());
+		}
+
+		return mealList;
+	}
+
 	
 	
 }
