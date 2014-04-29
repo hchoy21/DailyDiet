@@ -3,6 +3,7 @@ package com.supersloth.dailydiet.db;
 /**
  * This class creates an instance of a Meal
  * Meal(name, protein, vegetable, carbs)
+ * getter setters
  * @author Hendrik Choy
  *
  */

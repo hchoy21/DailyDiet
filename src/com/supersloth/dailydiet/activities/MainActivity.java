@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		// initialize the buttons
 		Button bGroceryList = (Button) findViewById(R.id.bGroceryList);
 		Button bProfile = (Button) findViewById(R.id.bProfile);
 		Button bHealthyTips = (Button) findViewById(R.id.bHealthyTips);
@@ -62,7 +63,6 @@ public class MainActivity extends Activity {
 		bGroceryList.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Log.d(TAG, "Grocery list button clicked");
 				groceryListButton();
 			}
 		});
@@ -71,7 +71,6 @@ public class MainActivity extends Activity {
 		bProfile.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Log.d(TAG, "Profile button clicked");
 				profileButton();
 			}
 		});
@@ -80,7 +79,6 @@ public class MainActivity extends Activity {
 		bHealthyTips.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Log.d(TAG, "Healthy tips button clicked");
 				healthyTipsButton();
 			}
 		});
@@ -89,7 +87,6 @@ public class MainActivity extends Activity {
 		bHungry.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-//				Log.d(TAG, "I'm Hungry button clicked");
 				hungryButton();
 			}
 		});
@@ -111,9 +108,11 @@ public class MainActivity extends Activity {
 		});
 
 		/****************************************** DATABASE ******************************************/
+		// Insert possible meals
+		// UPDATE HERE:
 		db = new MealDBHandler(this);
 
-		// insert meals
+		// insert available meals
 		Log.d("Insert: ", "Inserting ..");
 		db.addMeal(new Meal(1, "Beef Stew", "beef", "beans", "potato"));
 		db.addMeal(new Meal(2, "Beef Stroganoff", "beef", "mushrooms", "rice"));
@@ -128,7 +127,7 @@ public class MainActivity extends Activity {
 				"rice"));
 		db.addMeal(new Meal(9, "Spaghetti and Meatballs", "beef", "tomato",
 				"pasta"));
-		db.addMeal(new Meal(10, "Tuna Sandwich", "fish", "lettuce", "bread"));
+		db.addMeal(new Meal(10, "Tuna Sandwich", "fish", "tomato", "bread"));
 		db.addMeal(new Meal(11, "Tuna Salad", "fish", "lettuce", "bread"));
 		db.addMeal(new Meal(12, "Turkey Cutlets", "turkey", "beans", "bread"));
 		db.addMeal(new Meal(13, "Turkey Sandwich", "turkey", "lettuce", "bread"));
@@ -140,28 +139,11 @@ public class MainActivity extends Activity {
 		 * Turkey Cutlets "turkey", "beans", "bread"
 		 */
 
-		// test
-		// List<String> proteins = new ArrayList<String>();
-		// proteins.add("beef");
-		// proteins.add("chicken");
-		// List<String> vegs = new ArrayList<String>();
-		// vegs.add("mushrooms");
-		// vegs.add("tomato");
-		// List<String> carbs = new ArrayList<String>();
-		// carbs.add("potato");
-		// carbs.add("tortilla");
-		// carbs.add("rice");
 
-		savePref();
+		loadPref();
 		
 		chooseMeal();
-		
 
-		// for (String ameal : listCarb) {
-		// Toast toast = Toast.makeText(getApplicationContext(),
-		// ameal + "", Toast.LENGTH_SHORT);
-		// toast.show();
-		// }
 	}
 
 	@Override
@@ -173,7 +155,7 @@ public class MainActivity extends Activity {
 		listCarb.clear();
 		listVeg.clear();
 
-		savePref();
+		loadPref();
 		chooseMeal();
 	}
 
@@ -186,7 +168,7 @@ public class MainActivity extends Activity {
 		listCarb.clear();
 		listVeg.clear();
 
-		savePref();
+		loadPref();
 		chooseMeal();
 	}
 
@@ -198,22 +180,22 @@ public class MainActivity extends Activity {
 		listCarb.clear();
 		listVeg.clear();
 		
-		savePref();
+		loadPref();
 		
 		chooseMeal();
 	}
 
+	
+	/**
+	 * Chooses a meal based on what the user has checked on the grocery list.
+	 * Meal image button pictures are set based on the random meal selected
+	 */
 	public void chooseMeal(){
 		
+		// only proceed if there are available meals
 		if (db.getAvailableMeals(listProtein, listVeg, listCarb) != null) {
 
 			meals = db.getAvailableMeals(listProtein, listVeg, listCarb);
-
-//			for (Meal ameal : meals) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						ameal.get_name() + "", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 
 			if(meals.size()  <= 0){
 				return;
@@ -248,13 +230,18 @@ public class MainActivity extends Activity {
 				mImage.setImageResource(R.drawable.turkeysandwich);
 			}
 
+			
+			// commit to editor to save to sharedprefs
 			editor.commit();
 		}
 		
 	}
 	
 	
-	public void savePref() {
+	/**
+	 * Retrieve SharedPreferences data
+	 */
+	public void loadPref() {
 		SharedPreferences sp = PreferenceManager
 				.getDefaultSharedPreferences(this);
 
@@ -290,14 +277,6 @@ public class MainActivity extends Activity {
 	}
 
 	/****************************************** Button Methods ******************************************/
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	// Button Methods
 	public void profileButton() {
 		Intent intent = new Intent(this, ProfileActivity.class);
 		startActivity(intent);

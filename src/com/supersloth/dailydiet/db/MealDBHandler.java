@@ -101,6 +101,11 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return mealList;
 	}
 	
+	/**
+	 * queries database for meals of a specific protein
+	 * @param protein
+	 * @return
+	 */
 	public List<Meal> getMealsProtein(String protein){
 		List<Meal> meals = new ArrayList<Meal>();
 		
@@ -137,6 +142,11 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return meals;
 	}
 	
+	/**
+	 * queries database for meals of a specific vegetable
+	 * @param veg
+	 * @return
+	 */
 	public List<Meal> getMealsVeg(String veg){
 		List<Meal> meals = new ArrayList<Meal>();
 		
@@ -173,6 +183,11 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return meals;
 	}
 	
+	/**
+	 * queries database for meals of a specific carb
+	 * @param carb
+	 * @return
+	 */
 	public List<Meal> getMealsCarb(String carb){
 		List<Meal> meals = new ArrayList<Meal>();
 		
@@ -209,6 +224,10 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		return meals;
 	}
 	
+	/**
+	 * insert a meal into the database
+	 * @param meal
+	 */
 	public void addMeal(Meal meal){
 		SQLiteDatabase db = this.getWritableDatabase();
 		
@@ -223,6 +242,14 @@ public class MealDBHandler extends SQLiteOpenHelper{
 		db.close();
 	}
 
+	
+	/**
+	 * Get all available meals based on the grocery list
+	 * @param proteins
+	 * @param vegs
+	 * @param carbs
+	 * @return
+	 */
 	public List<Meal> getAvailableMeals(List<String> proteins,
 			List<String> vegs, List<String> carbs) {
 

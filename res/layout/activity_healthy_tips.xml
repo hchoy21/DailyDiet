@@ -21,23 +21,30 @@
         android:text="Next Tip" />
 
     <TextView
-        android:id="@+id/tvTip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvTodaysDate"
-        android:layout_marginTop="73dp"
-        android:gravity="center"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/tvTipNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bNext"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="97dp"
+        android:gravity="center"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/ivTipsPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTip"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/water" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvTodaysDate"
         android:gravity="center"
         android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />

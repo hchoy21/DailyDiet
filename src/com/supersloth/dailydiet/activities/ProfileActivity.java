@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,8 @@ public class ProfileActivity extends Activity  {
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState); 
         setContentView(R.layout.activity_profile); 
+        
+        getActionBar().setHomeButtonEnabled(true);
         
         // initialize textviews and button
         TextView tvName = (TextView)findViewById(R.id.tvName); 
@@ -54,4 +57,17 @@ public class ProfileActivity extends Activity  {
     	Intent intent = new Intent(this, EditProfileActivity.class);
     	startActivity(intent);
     }
+    
+    private void backButton() {
+		Intent intent = new Intent(this, MainActivity.class);
+		startActivity(intent);
+	}
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (android.R.id.home == item.getItemId()) {
+			backButton();
+		}
+		return super.onOptionsItemSelected(item);
+	}
+    
 } 

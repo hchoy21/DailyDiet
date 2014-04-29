@@ -47,6 +47,7 @@ public class GroceryListActivity extends Activity {
 		tortilla = (CheckBox) findViewById(R.id.cbTortilla);
 		potato = (CheckBox) findViewById(R.id.cbPotato);
 
+		// set checkbox defaults to false
 		chicken.setChecked(sharPrefs.getBoolean("chicken", false));
 		beef.setChecked(sharPrefs.getBoolean("beef", false));
 		pork.setChecked(sharPrefs.getBoolean("pork", false));
@@ -77,57 +78,54 @@ public class GroceryListActivity extends Activity {
 		});
 	}
 
+	
+	/**
+	 * Checkboxes require onCheckBoxClicked method
+	 */
 	public void onCheckBoxClicked(View v) {
 
 		boolean checked = ((CheckBox) v).isChecked();
 
 		switch (v.getId()) {
 		case R.id.cbChicken:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"chicken clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 			break;
 		case R.id.cbBeef:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"beef clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 			break;
 		case R.id.cbPork:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"pork clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 			break;
 		case R.id.cbFish:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"fish clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 			break;
 		case R.id.cbTurkey:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"turkey clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
 			break;
 		case R.id.cbMushrooms:
-//			if (checked) {
-//				Toast toast = Toast.makeText(getApplicationContext(),
-//						"mushroom clicked", Toast.LENGTH_SHORT);
-//				toast.show();
-//			}
+			break;
+		case R.id.cbLettuce:
+			break;
+		case R.id.cbBroccoli:
+			break;
+		case R.id.cbTomato:
+			break;
+		case R.id.cbBeans:
+			break;
+		case R.id.cbRice:
+			break;
+		case R.id.cbPasta:
+			break;
+		case R.id.cbBread:
+			break;
+		case R.id.cbTortilla:
+			break;
+		case R.id.cbPotato:
 			break;
 		}
 
 	}
 
+	
+	/**
+	 * Saves the checkbox states as booleans to be recovered in another activity.
+	 * Checkbox state is permanent until user uncheck or application uninstall
+	 */
 	public void savePref() {
 
 		SharedPreferences sharPrefs = PreferenceManager
@@ -149,7 +147,7 @@ public class GroceryListActivity extends Activity {
 		editor.putBoolean("bread", bread.isChecked());
 		editor.putBoolean("tortilla", tortilla.isChecked());
 		editor.putBoolean("potato", potato.isChecked());
-
+		
 		editor.commit();
 	}
 }
